@@ -1,0 +1,85 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["extendedWhereUnique"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model user {
+  id       Int    @id @default(autoincrement())
+  name     String
+  username String
+  password String
+  role     role @default(user)
+}
+
+model basket {
+  id     Int @id @default(autoincrement())
+  userId Int @unique
+}
+
+model order {
+  id           Int     @id @default(autoincrement())
+  name         String
+  surname      String
+  phone        String
+  viloyat      String
+  tuman        String
+  shahar       String
+  aniq_adress  String
+  umumiybahosi Decimal
+  products     Int[]
+  status       String  @default("saqlangan")
+  basketId     Int 
+}
+
+model count {
+  id         Int @id @default(autoincrement())
+  productId Int
+  counts     Int
+  basketId   Int
+}
+
+model user_info {
+  id           Int     @id @default(autoincrement())
+  name         String
+  surname      String
+  phone        String
+  viloyat      String
+  tuman        String
+  shahar       String
+  aniq_adress  String
+  umumiybahosi Decimal
+}
+
+model categories {
+  id   Int    @id @default(autoincrement())
+  name String
+}
+
+model types {
+  id           Int    @id @default(autoincrement())
+  name         String
+  img          String
+  categoriesId Int
+}
+
+model products {
+  id      Int     @id @default(autoincrement())
+  name    String
+  img     String
+  price   Decimal
+  desc    String
+  typesId Int
+}
+
+enum role {
+  user
+  admin
+}
