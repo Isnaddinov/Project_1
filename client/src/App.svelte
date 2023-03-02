@@ -2,11 +2,11 @@
     import { Router, Route, Link, link } from "svelte-navigator";
 
 
-let bar:boolean = false
+let type:boolean = false
 let active:boolean = false;
 
 </script>
-
+<div class={"" + (active ? "overline" : "") }></div>
 <div class="wrapper">
     <div class="nav_alert"><p>Eng kam buyurtma summasi 50.000 so'm</p></div>
     <div class="container">
@@ -65,7 +65,6 @@ let active:boolean = false;
         <div class="nav_bottom">
             <div class="categor_div">
                 <div class="navigation">
-                    
                         <h2 >CATEGORIES </h2>  
                     <button class = {"" + (active ? "active-icon" : "menu-icon") }   on:click="{() => active = !active}">
                         <span></span>
@@ -75,8 +74,7 @@ let active:boolean = false;
                 </div>
                 <ul class="nav_ul" style={"" + (active ? "display:flex" : "display:none")}>
                     <li class="list">
-                        <span class="title">Santexnika</span>
-                    </li>
+                        <span class="title">Santexnika</li>
                     <li class="list">
                         <span class="title">Santexnika</span>
                     </li>
