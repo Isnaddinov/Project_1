@@ -63,36 +63,6 @@ let active:boolean = false;
             </div>
         </div>
         <div class="nav_bottom">
-            <div class="categor_div">
-                <div class="navigation">
-                        <h2 >CATEGORIES </h2>  
-                    <button class = {"" + (active ? "active-icon" : "menu-icon") }   on:click="{() => active = !active}">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                     </button>
-                </div>
-                <ul class="nav_ul" style={"" + (active ? "display:flex" : "display:none")}>
-                    <li class="list">
-                        <span class="title">Santexnika</li>
-                    <li class="list">
-                        <span class="title">Santexnika</span>
-                    </li>
-                    <li class="list">
-                        <span class="title">Santexnika</span>
-                    </li>
-                    <li class="list">
-                        <span class="title">Santexnika</span>
-                    </li>
-                    <li class="list">
-                        <span class="title">Santexnika</span>
-                    </li>
-                    <li class="list">
-                        <span class="title">Santexnika</span>
-                    </li>
-                </ul>
-            </div>
-
             <div class="others">
                 <div class="search">
                     <input type="text" placeholder="Tovarlarni qidirish" />
@@ -124,7 +94,71 @@ let active:boolean = false;
                     </Router>
                 </div>
             </div>
+            
+                <div class="navigation">
+                        <h2 >CATEGORIES </h2>  
+                    <button class = {"" + (active ? "active-icon" : "menu-icon") }   on:click="{() => active = !active}">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                     </button>
+                </div>
         </div>
-       
+        <div class="nav_bar">
+            <ul class="nav_ul"  style={"" + (active ? "display:flex" : "display:none")}>
+          <li class="list">
+              <span class="title" on:mousemove={() => type = true}>Santexnika</li>
+          <li class="list">
+              <span class="title">Santexnika</span>
+          </li>
+          <li class="list">
+              <span class="title">Santexnika</span>
+          </li>
+          <li class="list">
+              <span class="title">Santexnika</span>
+          </li>
+          <li class="list">
+              <span class="title">Santexnika</span>
+          </li>
+          <li class="list">
+              <span class="title">Santexnika</span>
+          </li>
+      </ul>
+      <div class="type_nav" style={"" + (active ? "display:flex": "display:none")} >
+          <h2>Categor name</h2>
+          <div class="card_box">
+              <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
+                  <img src="https://www.almin.ru/upload/iblock/aa2/sledopyt.jpg" alt=""> 
+                  <p>Type name</p>
+               </button>
+              <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
+                  <img src="https://www.almin.ru/upload/iblock/aa2/sledopyt.jpg" alt=""> 
+                  <p>Type name</p>
+               </button>
+              <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
+                  <img src="https://www.almin.ru/upload/iblock/aa2/sledopyt.jpg" alt=""> 
+                  <p>Type name</p>
+               </button>
+              <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
+                  <img src="https://www.almin.ru/upload/iblock/aa2/sledopyt.jpg" alt=""> 
+                  <p>Type name</p>
+               </button>
+              <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
+                  <img src="https://www.almin.ru/upload/iblock/aa2/sledopyt.jpg" alt=""> 
+                  <p>Type name</p>
+               </button>
+              <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
+                  <img src="https://www.almin.ru/upload/iblock/aa2/sledopyt.jpg" alt=""> 
+                  <p>Type name</p>
+               </button>
+              <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
+                  <img src="https://www.almin.ru/upload/iblock/aa2/sledopyt.jpg" alt=""> 
+                  <p>Type name</p>
+               </button>
+              
+          </div>
+                             
+      </div>
+      </div>
     </div>
 </div>

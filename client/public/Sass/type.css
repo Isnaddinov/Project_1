@@ -1,1 +1,43 @@
-/*# sourceMappingURL=type.css.map */
+.type_nav {
+  flex-direction: column;
+  margin-left: 24px;
+  height: 100%;
+  width: 1056px;
+  background-color: hwb(0 95% 4%);
+}
+.type_nav h2 {
+  font-size: 22px;
+  margin-left: 45px;
+  margin-top: 15px;
+  height: 10%;
+  color: rgb(37, 33, 33);
+  margin-bottom: 15px;
+}
+
+.type_card {
+  width: 150px;
+  height: 200px;
+  margin-left: 45px;
+  border-radius: 15px;
+  background-color: hwb(0 95% 4%);
+  box-shadow: 1px 2px 21px 0px rgba(34, 60, 80, 0.2);
+  margin-bottom: 15px;
+}
+.type_card img {
+  position: relative;
+  bottom: 16px;
+  width: 150px;
+  height: 140px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.type_card p {
+  color: rgb(195, 168, 32);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card_box {
+  display: flex;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=type.css.map */
