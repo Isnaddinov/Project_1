@@ -1,9 +1,9 @@
-<script lang="ts">
+<script lang="ts" >
     import { Router, Route, Link, link } from "svelte-navigator";
 
 
 let type:boolean = false
-
+export let active: boolean = false
 
 </script>
 <div class={"" + (active ? "overline" : "") }></div>
@@ -153,7 +153,6 @@ let type:boolean = false
           <p>Type name</p>
        </button>
       
-  </div>
-                     
+    </div>           
 </div>
 </div>
