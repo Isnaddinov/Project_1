@@ -125,33 +125,38 @@ export let active: boolean = false
   <h2>Categor name</h2>
   <div class="card_box">
       <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
-          <img src="https://www.almin.ru/upload/iblock/aa2/sledopyt.jpg" alt=""> 
+          <img src="../img/sement.jpeg" alt=""> 
           <p>Type name</p>
        </button>
       <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
-          <img src="https://www.almin.ru/upload/iblock/aa2/sledopyt.jpg" alt=""> 
+          <img src="../img/sement2.jpg" alt=""> 
           <p>Type name</p>
        </button>
       <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
-          <img src="https://www.almin.ru/upload/iblock/aa2/sledopyt.jpg" alt=""> 
+          <img src="../img/sement3.jpg" alt=""> 
           <p>Type name</p>
        </button>
       <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
-          <img src="https://www.almin.ru/upload/iblock/aa2/sledopyt.jpg" alt=""> 
+          <img src="../img/sement4.jpg" alt=""> 
           <p>Type name</p>
        </button>
       <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
-          <img src="https://www.almin.ru/upload/iblock/aa2/sledopyt.jpg" alt=""> 
+          <img src="../img/sement3.jpg" alt=""> 
           <p>Type name</p>
        </button>
       <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
-          <img src="https://www.almin.ru/upload/iblock/aa2/sledopyt.jpg" alt=""> 
+          <img src="../img/sement4.jpg" alt=""> 
           <p>Type name</p>
        </button>
       <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
-          <img src="https://www.almin.ru/upload/iblock/aa2/sledopyt.jpg" alt=""> 
+          <img src="../img/sement3.jpg" alt=""> 
           <p>Type name</p>
        </button>
+      <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
+          <img src="../img/sement4.jpg" alt=""> 
+          <p>Type name</p>
+       </button>
+      
       
     </div>           
 </div>
@@ -180,7 +185,7 @@ export let active: boolean = false
     <h3 class="title">Yangi tovarlar</h3>
     <div class="products">
         <div class="product">
-                <div class="image"><span>Yangi</span><img src="./img/Product1.jpg" alt=""></div>
+                <div class="image"><span class="new_s">Yangi</span><img src="./img/Product1.jpg" alt=""></div>
                 <h2>Name</h2>
                 <p>Description</p>
                 <span>120000 so'm</span>
@@ -188,7 +193,7 @@ export let active: boolean = false
                 <button>Savatga tashlash</button>
         </div>
         <div class="product">
-                <div class="image"><span>Yangi</span><img src="./img/Product1.jpg" alt=""></div>
+                <div class="image"><span class="new_s">Yangi</span><img src="./img/Product1.jpg" alt=""></div>
                 <h2>Name</h2>
                 <p>Description</p>
                 <span>120000 so'm</span>
@@ -196,7 +201,7 @@ export let active: boolean = false
                 <button>Savatga tashlash</button>
         </div>
         <div class="product">
-                <div class="image"><span>Yangi</span><img src="./img/Product1.jpg" alt=""></div>
+                <div class="image"><span class="new_s">Yangi</span><img src="./img/Product1.jpg" alt=""></div>
                 <h2>Name</h2>
                 <p>Description</p>
                 <span>120000 so'm</span>
@@ -204,7 +209,7 @@ export let active: boolean = false
                 <button>Savatga tashlash</button>
         </div>
         <div class="product">
-                <div class="image"><span>Yangi</span><img src="./img/Product1.jpg" alt=""></div>
+                <div class="image"><span class="new_s">Yangi</span><img src="./img/Product1.jpg" alt=""></div>
                 <h2>Name</h2>
                 <p>Description</p>
                 <span>120000 so'm</span>
@@ -214,7 +219,84 @@ export let active: boolean = false
     </div>
   </div>
   <!-- New Products end -->
-
-
+<!-- Categories -->
+<button class="categories-box">
+    <h2>Kategoirayalar</h2>
+    <div class="categories">
+         <div class="category">
+        <img src="../img/categor.jpg" alt="">
+        <h3>Categor name</h3>
+    </div>
+         <div class="category">
+        <img src="../img/categor.jpg" alt="">
+        <h3>Categor name</h3>
+    </div>
+         <div class="category">
+        <img src="../img/categor.jpg" alt="">
+        <h3>Categor name</h3>
+    </div>
+         <div class="category">
+        <img src="../img/categor.jpg" alt="">
+        <h3>Categor name</h3>
+    </div>
+         <div class="category">
+        <img src="../img/categor.jpg" alt="">
+        <h3>Categor name</h3>
+    </div>
+         <div class="category">
+        <img src="../img/categor.jpg" alt="">
+        <h3>Categor name</h3>
+    </div>
+         <div class="category">
+        <img src="../img/categor.jpg" alt="">
+        <h3>Categor name</h3>
+    </div>
+         <div class="category">
+        <img src="../img/categor.jpg" alt="">
+        <h3>Categor name</h3>
+    </div>
+    </div>
+   
+</button>
+<!-- Categories end -->
+<!--Discounts -->
+<div class="new_products">
+    <h3 class="discount_title">Chegirmali tovarlar</h3>
+    <div class="products">
+        <div class="product">
+                <div class="image"><span class="discount_s">Chegirma</span> <span class="dis_c">-40%</span><img src="./img/Product1.jpg" alt=""></div>
+                <h2>Name</h2>
+                <p>Description</p>
+                <span>120000 so'm</span>
+                <h3>Naqdga</h3>
+                <button>Savatga tashlash</button>
+        </div>
+        <div class="product">
+                <div class="image"><span class="discount_s">Chegirma</span><img src="./img/Product1.jpg" alt=""></div>
+                <h2>Name</h2>
+                <p>Description</p>
+                <span>120000 so'm</span>
+                <h3>Naqdga</h3>
+                <button>Savatga tashlash</button>
+        </div>
+        <div class="product">
+                <div class="image"><span class="discount_s">Chegirma</span><img src="./img/Product1.jpg" alt=""></div>
+                <h2>Name</h2>
+                <p>Description</p>
+                <span>120000 so'm</span>
+                <h3>Naqdga</h3>
+                <button>Savatga tashlash</button>
+        </div>
+        <div class="product">
+                <div class="image"><span class="discount_s">Chegirma</span><img src="./img/Product1.jpg" alt=""></div>
+                <h2>Name</h2>
+                <p>Description</p>
+                <span>120000 so'm</span>
+                <h3>Naqdga</h3>
+                <button>Savatga tashlash</button>
+        </div>
+    </div>
+  </div>
+<!--Discounts end-->
            
     
