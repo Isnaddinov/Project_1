@@ -267,64 +267,126 @@
     width: 1297px;
     background-color: hwb(0 95% 4%);
 }
-footer{
-    display: flex;
+
+footer {
     margin-top: 125px;
-    ul{
+
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            .contact_item {
+                display: flex;
+                p{
+                  color: black;  
+                }
+
+                svg {
+                    margin-right: 5px;
+                }
+            }
+
+            li {
+                color: #777777;
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    text-align: center;
+                    width: 100%;
+                    color: #777777;
+                }
+
+                margin-bottom: 15px;
+            }
+
+            img {
+                width: 30px;
+                height: 30px;
+                align-items: center;
+            }
+        }
+    }
+
+    .f_info {
         display: flex;
         flex-direction: column;
-        li{
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        margin-bottom: 100px;
+
+        h1 {
             text-align: center;
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 18px;
+
+            .span1 {
+                color: orange;
+            }
+
+            .span2 {
+                font-weight: lighter;
+                font-size: 16px;
+                font-weight: 700;
+            }
         }
-        img {
-            width: 30px;
-            height: 30px;
+
+        .logo {
+            display: flex;
+            width: 254px;
+            justify-content: space-between;
             align-items: center;
-        }
-    }
-}
-.f_info{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 100px;
-    
-    h1 {
-        text-align: center;
-        font-weight: bold;
-        font-size: 22px;
-        line-height: 18px;
+            margin-right: 40px;
+            margin-bottom: 25px;
 
-        .span1 {
-            color: orange;
+            img {
+                width: 50px;
+                height: 50px;
+                align-items: center;
+                margin-right: 5px;
+                border-radius: 15px;
+            }
         }
 
-        .span2 {
-            font-weight: lighter;
-            font-size: 16px;
-            font-weight: 700;
+        p {
+            width: 355px;
         }
+
     }
 
-    .logo {
+    .gps_icon {
+        svg {
+            width: 30px;
+            height: 35px;
+        }
+    }
+
+    .gps_item {
         display: flex;
-        width: 254px;
-        justify-content: space-between;
-        align-items: center;
-        margin-right: 40px;
+        p{
+            color: black;
+        }
+    }
+
+    .copyright_sign {
+        display: flex;
         margin-bottom: 25px;
 
-        img {
-            width: 50px;
-            height: 50px;
-            align-items: center;
-            margin-right: 5px;
-            border-radius: 15px;
+        p {
+            margin-left: 5px;
         }
     }
-    p{
-        width: 355px;
+
+    .li_p {
+        margin-left: 28px;
+        color: black;
     }
 }
