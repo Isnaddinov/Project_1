@@ -2,9 +2,10 @@ POST http://localhost:9090/stroyapi/user/regisratsion
 Content-Type: application/json
 
 {
-    "name": "Mashhurbek",
-    "username": "mashhurbek",
-    "password": "123456789"
+    "name": "Otabek",
+    "username": "otabek",
+    "password": "123456789",
+    "role": "admin"
 }
 
 ###
@@ -31,8 +32,8 @@ GET http://localhost:9090/stroyapi/user/auth
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTY3NDU2NTE4MSwiZXhwIjoxNjc0NjUxNTgxfQ.rxx0fa4Hqz0wAGzwEm1il_qg0Xp8MdHkcRrT51HJBQQ
 
 ###
-GET http://localhost:9090/stroyapi/user/auth
-Content-Type: application/json
+GET http://localhost:9090/stroyapi/user/auth/admin
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4MjkyMjkwLCJleHAiOjE2NzgzNzg2OTB9.QLsopqojJoV8h7pWVuGDKi5rFwSVWWsp2oAqswXnuyY
 
 ###
 GET http://localhost:9090/stroyapi/basket_product/get?product_id=3&basket_id_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJiYXNrZXRfaWQiOjMsImlhdCI6MTY3NTA5MjQxNiwiZXhwIjoxNjc1MTc4ODE2fQ.7E6bifBFzMdR8a3azQHdZ_-98dH2FkdI5qAqpgnGeFo

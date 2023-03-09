@@ -1,4 +1,5 @@
-import { client } from './../routers/Prismaclient.routes';
+import { role } from '@prisma/client';
+import { client } from './../routers/prismaclient.routes';
 import bcrypt from 'bcrypt'
 
 export async function findUserById(id: number) { 
@@ -14,7 +15,7 @@ export async function findUserByUsername(username:string) {
     catch (error) {
     console.error('Error findUser by username service' + error);}
 }
-export async function postUser(name:string, username:string, password:string,role:string){
+export async function postUser(name:string, username:string, password:string, role:role | undefined){
     const hashPassword = bcrypt.hashSync(password, 7);
     try {
       return await client.user.create({data:{name: name,username:username,password: hashPassword,role: role},})

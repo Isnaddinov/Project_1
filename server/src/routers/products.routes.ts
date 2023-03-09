@@ -7,12 +7,12 @@ import { userMiddleWhere } from '../middlewares/userMiddlewere'
 const router = Router()
 
 
-router.post('/post',  uploadFile(), userMiddleWhere, postProducts)
+router.post('/post/admin',  uploadFile(), userMiddleWhere, productsCheck(), postProducts)
 router.get('/getbytypeid/:id', getProductsbyTypeId)
 router.get('/getbyid/:id', getProductbyId)
 router.get('/getbysearch', getSearchProduct)
 router.get('/getall/admin', userMiddleWhere, getAllProducts)
-router.put('/put/:id',  uploadFile(), userMiddleWhere, updateProducts)
-router.delete('/delete/:id', userMiddleWhere, deleteProducts)
+router.put('/put/admin/:id',  uploadFile(), userMiddleWhere, productsCheck(), updateProducts)
+router.delete('/delete/admin/:id', userMiddleWhere, deleteProducts)
 
 export default router

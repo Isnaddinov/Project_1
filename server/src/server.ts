@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import router from './routers/index.routes'
+import { PORT } from './routers/prismaclient.routes'
 
 const app = express()
 
@@ -15,6 +16,6 @@ app.use('/stroyapi', router)
 
 
 
-app.listen(9090, () => {
-    console.log(`Server is running on port: ${9090}`);  
+app.listen(PORT, () => {
+    console.log(`Server is running on port: ${PORT}`);  
 })

@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken'
-import { sec } from './config';
+import { SEC_KEY } from '../routers/prismaclient.routes'
 
 export function generateAccessToken(id:number, role:string){
     const payload = {
@@ -7,14 +7,15 @@ export function generateAccessToken(id:number, role:string){
         role
     }
 
-    return jwt.sign(payload, sec.secret, {expiresIn: "24h"})   
+    return jwt.sign(payload, SEC_KEY, {expiresIn: "24h"})   
 }
 export function generateUserIdToken(id:number){
     const payload = {
         id
     }
 
-    return jwt.sign(payload, sec.secret, {expiresIn: "24h"})   
+    return jwt.sign(payload, SEC_KEY, {expiresIn: "24h"})   
 }
+
 
 

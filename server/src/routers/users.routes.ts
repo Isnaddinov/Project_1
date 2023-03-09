@@ -8,6 +8,6 @@ const router = Router()
 
 router.post('/regisratsion', loginCheck(), regisratsion)
 router.post('/login',login)
-router.get('/auth', userMiddleWhere ,getUsers)
+router.get('/auth/admin', userMiddleWhere ,getUsers)
 
 export default router

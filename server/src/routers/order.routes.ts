@@ -5,7 +5,7 @@ import { orderCheck } from '../validators/order'
 const router = Router()
 
 
-router.post('/post', postOrder)
+router.post('/post', orderCheck(), postOrder)
 router.get('/get/:id', getOrderfoByBaseketId)
 router.delete('/delete/:id', deleteOrder)
 

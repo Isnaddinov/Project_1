@@ -116,14 +116,87 @@
     margin-bottom: 65px;
     text-align: center;
 }
-.discount_s{
-    border-top-left-radius: 10px;
-    color: white;
-    background-color: #1FE499;
-    width: 95px;
-    height: 26px;
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 5px;
-    border-bottom-right-radius: 10px;
+
+.dis_product{
+    width: 234px;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px 0px rgba(34, 60, 80, 0.2);
+    img {
+        width: 100%;
+        height: 85%;
+        border-radius: 10px;
+
+    }
+    .discount_s{
+        border-top-left-radius: 10px;
+        color: white;
+        background-color: #1FE499;
+        width: 95px;
+        height: 26px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        border-bottom-right-radius: 10px;
+    }
+    .dis_price{
+        display: flex;
+        align-content: center;
+        height: 39px;
+        padding-left: 7px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 20px;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .dis_c{
+        display: inline-block;
+        color: rgb(219, 188, 9);
+        font-size: 24px;
+        font-weight: 700;
+        margin-left: 22px;
+    }
+    .dis_title{
+        font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 23px;
+            margin-top: 7px;
+            margin-bottom: 7px;
+            text-align: center;
+    }
+    p {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 15px;
+        padding-left: 9px;
+
+    }
+    h3 {
+        margin-bottom: 15px;
+        color: #1FE499;
+        padding-left: 7px;
+        font-size: 14px;
+    }
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 234px;
+        height: 45px;
+        background: #000000;
+        color: #FFFFFF;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    
 }

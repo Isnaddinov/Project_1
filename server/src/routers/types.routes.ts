@@ -7,10 +7,10 @@ const router = Router()
 
 
 
-router.post('/post',  userMiddleWhere, uploadFile(), postTypes)
+router.post('/post/admin', userMiddleWhere, typesCheck(), uploadFile(), postTypes)
 router.get('/get/:id', getTypesbyCat_id)
 router.get('/getall/admin', userMiddleWhere, getAllTypes)
-router.put('/put/:id',  uploadFile(), userMiddleWhere,updateTypes)
-router.delete('/delete/:id',userMiddleWhere, deleteTypes)
+router.put('/put/admin/:id',  uploadFile(), userMiddleWhere, typesCheck(),updateTypes)
+router.delete('/delete/admin/:id',userMiddleWhere, deleteTypes)
 
 export default router

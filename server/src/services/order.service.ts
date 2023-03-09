@@ -1,5 +1,5 @@
 import { Order } from './../types/types';
-import { client } from './../routers/Prismaclient.routes';
+import { client } from "../routers/prismaclient.routes";
 export async function findOrderByBasketId(basket_id:number){
     try {
         return await client.order.findMany({where:{basketId:basket_id}})

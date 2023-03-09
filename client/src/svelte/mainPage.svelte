@@ -52,7 +52,7 @@ export let active: boolean = false
         </svg>
         <p>+99890-429-01-07</p>
         <a href="https://t.me/Isnaddinovdev"
-            ><img src="../img/telegram.png" alt="" /></a
+            ><img src="../img/telegram.png" alt="" /> </a
         >
         <a href="https://t.me/Isnaddinovdev"
             ><img src="../img/instagram.png" alt="" /></a
@@ -263,40 +263,74 @@ export let active: boolean = false
 <div class="new_products">
     <h3 class="discount_title">Chegirmali tovarlar</h3>
     <div class="products">
-        <div class="product">
+        <div class="dis_product">
                 <div class="image"><span class="discount_s">Chegirma</span> <span class="dis_c">-40%</span><img src="./img/Product1.jpg" alt=""></div>
-                <h2>Name</h2>
+                <h2 class="dis_title">Name</h2>
                 <p>Description</p>
-                <span>120000 so'm</span>
-                <h3>Naqdga</h3>
+                <span class="dis_price" >480000 so'm <sup><del class="dis_del">120000</del></sup></span>
                 <button>Savatga tashlash</button>
         </div>
-        <div class="product">
-                <div class="image"><span class="discount_s">Chegirma</span><img src="./img/Product1.jpg" alt=""></div>
-                <h2>Name</h2>
+        <div class="dis_product">
+                <div class="image"><span class="discount_s">Chegirma</span> <span class="dis_c">-40%</span><img src="./img/Product1.jpg" alt=""></div>
+                <h2 class="dis_title">Name</h2>
                 <p>Description</p>
-                <span>120000 so'm</span>
-                <h3>Naqdga</h3>
+                <span class="dis_price" >480000 so'm <sup><del class="dis_del">120000</del></sup></span>
                 <button>Savatga tashlash</button>
         </div>
-        <div class="product">
-                <div class="image"><span class="discount_s">Chegirma</span><img src="./img/Product1.jpg" alt=""></div>
-                <h2>Name</h2>
+        <div class="dis_product">
+                <div class="image"><span class="discount_s">Chegirma</span> <span class="dis_c">-40%</span><img src="./img/Product1.jpg" alt=""></div>
+                <h2 class="dis_title">Name</h2>
                 <p>Description</p>
-                <span>120000 so'm</span>
-                <h3>Naqdga</h3>
+                <span class="dis_price" >480000 so'm <sup><del class="dis_del">120000</del></sup></span>
                 <button>Savatga tashlash</button>
         </div>
-        <div class="product">
-                <div class="image"><span class="discount_s">Chegirma</span><img src="./img/Product1.jpg" alt=""></div>
-                <h2>Name</h2>
+        <div class="dis_product">
+                <div class="image"><span class="discount_s">Chegirma</span> <span class="dis_c">-40%</span><img src="./img/Product1.jpg" alt=""></div>
+                <h2 class="dis_title">Name</h2>
                 <p>Description</p>
-                <span>120000 so'm</span>
-                <h3>Naqdga</h3>
+                <span class="dis_price" >480000 so'm <sup><del class="dis_del">120000</del></sup></span>
                 <button>Savatga tashlash</button>
         </div>
+        
     </div>
   </div>
 <!--Discounts end-->
-           
+<!-- Footer -->
+<footer>
+    <Router>
+        <div class="f_info">
+            <div class="logo">
+                <img
+                    class="logo_img"
+                    src="../img/Zafarbek-1.png"
+                    alt="logo_img"
+                />
+                <h1>
+                    XOZTOVAR.<span class="span1">UZ</span> <br />
+                    <span class="span2">Xoztovarlar internet do'koni</span>
+                </h1>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, labore neque dolores error quasi repellat est numquam. Ipsam soluta quaerat voluptatem. Ex ullam blanditiis natus dolor aliquam nobis perferendis ducimus.</p>
+        </div>
+        <ul class="company">
+            <h2>Kompaniya</h2>
+            <li>Rekvizitlar</li>
+            <Link to="/kontaktlar"><li>Kontaktlar</li></Link> 
+            <li>Izohlar</li>
+        </ul>
+        <ul>
+            <h2>Informatsiya</h2>
+            <Link to="/yetkazish"> <li>Yetkazish va To'lov</li></Link>
+                <Link to="/kopmaniyaHaqida" ><li>Kompaniya haqida</li></Link>
+        </ul>
+        <ul>
+            <h2>Ijtimoiy tarmoqlarda biz</h2>
+          <li>  <a href="https://t.me/Isnaddinovdev">
+            <img src="../img/telegram.png" alt="" />TELEGRAMM</a></li>
+        <li><a href="https://t.me/Isnaddinovdev">
+            <img src="../img/instagram.png" alt="" />INSTAGRAMM</a></li>
+        </ul>
+    </Router>
+</footer>
+<!-- Footer end-->
     

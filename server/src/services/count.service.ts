@@ -1,4 +1,4 @@
-import { client } from './../routers/Prismaclient.routes';
+import { client } from "../routers/prismaclient.routes";
 
 export async function writeCount(producId:number, counts: number, basketId:number){
    try {

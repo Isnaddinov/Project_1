@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken'
 import { NextFunction, Request, Response } from "express";
-import { sec } from './config';
+import { SEC_KEY } from '../routers/prismaclient.routes';
 
 
 
@@ -12,7 +12,7 @@ export async function userMiddleWhere(req: Request, res: Response, next: NextFun
             return res.status(403).json({ message: "Foydalanuvchi Avtorizatsidan o'tmagan" })
         }
 
-        const { role } = Object(jwt.verify(token, sec.secret))
+        const { role } = Object(jwt.verify(token, SEC_KEY))
 
         let hasRole = false
 

@@ -7,6 +7,6 @@ const router = Router()
 
 router.post( '/post',postBasket)
 router.get('/get', getBasket)
-router.delete('/delete/:id', userMiddleWhere, deleteBasket)
+router.delete('/delete/admin/:id', userMiddleWhere, deleteBasket)
 
 export default router
