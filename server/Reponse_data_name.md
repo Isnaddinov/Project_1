@@ -5,7 +5,7 @@ b) Login = `token` -> (user.id, user.role)
 c) GetAllusers = `Allusers` -> For admin
 ---------------------------------------------
 2. Basket:
-a) Post = `basket` -> (id, order,userId )
+a) Post = `newBasket` -> (id, order,userId )
 b) Get = `loginBasket` -> (order) -> Tokenlangan user.id ni query zaprosda `token` dab yibaramiz
 c) Delete = `basket` -> (id, order,userId) Paramsda Basketni `id`sini baramiz 
 --------------------------------------------------------
@@ -40,7 +40,13 @@ c) Delete = `order` -> (name, surname, phone, viloyat, tuman, shahar, aniq_adres
 a) Post = `count` -> (id, productId,  counts, basketId)
 b) Get = `count` -> (id, productId,  counts, basketId) Elsatma! query zaprosda key `productId & basketId` dab yibaramiz
 c) Delete = `count` -> (id, productId,  counts, basketId) Paramsda Count `id`sini baramiz 
-
+------------------------------------------------------------------------------------------------
+8. Banner:
+a) Post = `banner` -> (id, img, title)
+b) Get = `banner` -> (id, img, title)
+c) Put = `banner` -> (id, img, title) Eslatma! Paramsda Bannerni `id`si bariladi
+d) Delete = `banner` -> (id, img, title) Paramsda Bannerni `id`sini baramiz 
+ 
 
 SQL SHELL (psql) = `CREATE DATABASE shop_1;`
 Server's terminal = `npx prisma db push`

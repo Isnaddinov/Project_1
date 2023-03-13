@@ -6,6 +6,7 @@ import typeRouter from './types.routes'
 import productRouter from './products.routes'
 import orderRouter from './order.routes'
 import countRouter from './counts.routes'
+import bannerRouter from './banner.routes'
 
 
 const router = Router()
@@ -18,6 +19,7 @@ router.use('/types', typeRouter )
 router.use('/products', productRouter )
 router.use('/order', orderRouter )
 router.use('/count', countRouter )
+router.use('/banner', bannerRouter)
 
 export default router
 

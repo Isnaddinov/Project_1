@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
  dotenv.config()
 export const SEC_KEY = process.env.SECRET_KEY!
 export const PORT = process.env.PORT!
+export const STORAGE = process.env.STORAGE!
 
 export const client =  new PrismaClient
 

@@ -16,7 +16,7 @@ model user {
   name     String
   username String
   password String
-  role     role @default(user)
+  role     role   @default(user)
 }
 
 model basket {
@@ -36,26 +36,29 @@ model order {
   umumiybahosi Decimal
   products     Int[]
   status       String  @default("saqlangan")
-  basketId     Int 
+  basketId     Int
 }
 
 model count {
-  id         Int @id @default(autoincrement())
+  id        Int @id @default(autoincrement())
   productId Int
-  counts     Int
-  basketId   Int
+  counts    Int
+  basketId  Int
 }
 
 model categories {
-  id   Int    @id @default(autoincrement())
-  name String
+  id    Int     @id @default(autoincrement())
+  name  String
+  types types[]
 }
 
 model types {
-  id           Int    @id @default(autoincrement())
+  id           Int        @id @default(autoincrement())
   name         String
   img          String
   categoriesId Int
+  products     products[]
+  categories   categories @relation(fields: [categoriesId], references: [id])
 }
 
 model products {
@@ -65,6 +68,12 @@ model products {
   price   Decimal
   desc    String
   typesId Int
+  types   types   @relation(fields: [typesId], references: [id])
+}
+model banner{
+  id Int @id @default(autoincrement())
+  img String
+  title String
 }
 
 enum role {

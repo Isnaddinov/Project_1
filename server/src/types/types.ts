@@ -49,6 +49,11 @@ export type Count = {
     counts: number
     basketId: number
 }
+export type Banner = {
+    id: number
+    img: string
+    title: string
+}
 
 
 

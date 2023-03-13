@@ -1,5 +1,5 @@
 import {Router} from 'express'
-import { postTypes, updateTypes, deleteTypes, getAllTypes, getTypesbyCat_id } from '../controllers/types'
+import { postTypes, updateTypes, deleteTypes, getAllTypes, getTypesbyCat_id,  } from '../controllers/types'
 import { uploadFile } from '../middlewares/uploads'
 import { typesCheck } from '../validators/types'
 import { userMiddleWhere } from '../middlewares/userMiddlewere'
