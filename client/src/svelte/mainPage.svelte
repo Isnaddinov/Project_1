@@ -26,7 +26,7 @@ export let active: boolean = false
                     <li>Yetkazish va To'lov</li></Link
                 >
                 <Link to="/yetkazuvchiKomp"
-                    ><li>Yetkazuvchi Kompaniyalar</li></Link
+                    ><li class="li_yet">Yetkazuvchi Kompaniyalar</li></Link
                 >
                 <Link to="/kontaktlar"><li>Kontaktlar</li></Link>
                 <Link to="/kopmaniyaHaqida"
@@ -333,7 +333,7 @@ export let active: boolean = false
         </ul>
 
         <ul>
-            <h2>Kontaktlar</h2>
+            <h2 class="kontakt_ul">Kontaktlar</h2>
             
             <li class="contact_item"><svg
                 xmlns="http://www.w3.org/2000/svg"

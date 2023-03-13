@@ -65,14 +65,19 @@
     display: flex;
 
     :not(:last-child) {
-        margin-right: 30px;
+        margin-right: 10px;
     }
 
     li {
+        width: 127px;
         font-style: normal;
         font-weight: 700;
         font-size: 14px;
         line-height: 20px;
+        text-align: center;
+    }
+    .li_yet{
+        width: 180px;
     }
 
 }
@@ -82,7 +87,7 @@
     width: 274px;
     align-items: center;
     justify-content: space-around;
-    margin-left: 174px;
+    margin-left: 170px;
 
     p {
         font-weight: 700;
@@ -135,6 +140,7 @@
                 border-style: solid;
                 border-color: #FFFFFF;
                 outline: none;
+                font-size: 15px;
             }
 
             img {
@@ -292,6 +298,7 @@ footer {
 
                 svg {
                     margin-right: 5px;
+                    color: black;
                 }
             }
 
@@ -366,6 +373,7 @@ footer {
         svg {
             width: 30px;
             height: 35px;
+            color: black;
         }
     }
 
@@ -378,6 +386,7 @@ footer {
 
     .copyright_sign {
         display: flex;
+        justify-content: center;
         margin-bottom: 25px;
 
         p {
@@ -388,5 +397,8 @@ footer {
     .li_p {
         margin-left: 28px;
         color: black;
+    }
+    .kontakt_ul{
+        text-align: center;
     }
 }

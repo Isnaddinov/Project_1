@@ -30,7 +30,7 @@ export async function postBasket(req: Request, res: Response) {
         if(!basket){return res.status(400).json({ message: "One Basket for One user" })}
         const useId = generateUserIdToken(Number(basket.userId))
         const newBasket = {id:basket.id, userId:useId }
-        return res.status(200).json({ message: "Basket writed ", basket})
+        return res.status(200).json({ message: "Basket writed ", newBasket})
     } catch (error) {
         res.status(400).json({ message: "Error post basket" + error })
     }

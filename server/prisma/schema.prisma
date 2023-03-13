@@ -46,18 +46,6 @@ model count {
   basketId   Int
 }
 
-model user_info {
-  id           Int     @id @default(autoincrement())
-  name         String
-  surname      String
-  phone        String
-  viloyat      String
-  tuman        String
-  shahar       String
-  aniq_adress  String
-  umumiybahosi Decimal
-}
-
 model categories {
   id   Int    @id @default(autoincrement())
   name String
