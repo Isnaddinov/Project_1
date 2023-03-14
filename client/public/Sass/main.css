@@ -347,4 +347,25 @@ footer .li_p {
 }
 footer .kontakt_ul {
   text-align: center;
+}
+
+.container_h {
+  width: 100vw;
+  padding: 0 20px;
+}
+
+.nav_panel_h {
+  display: flex;
+  width: 274px;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 108px;
+}
+.nav_panel_h p {
+  font-weight: 700;
+}
+.nav_panel_h img {
+  width: 30px;
+  height: 30px;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */

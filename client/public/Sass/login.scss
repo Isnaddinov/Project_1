@@ -1,0 +1,112 @@
+.login-container{
+    width:100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000b4;
+}
+.register-box{
+    .register{
+        width:100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h2{
+            font-size: 22px;
+            color: rgb(255, 217, 3);
+            margin-bottom: 10px;
+        }
+        input{
+            outline: none;
+            width:334px;
+            height: 40px;
+            border-radius: 5px 5px;
+            border-width: 1px 2px 1px 1px;
+            border-style: solid;
+            border-color: #FFFFFF;
+            outline: none;
+            font-size: 17px;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+        .btn{
+            width: 340px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            .register_btn{
+                background-color: rgb(7, 189, 7);
+                width: 120px;
+                height: 30px;
+                border-radius: 5px;
+                color: #FFFFFF;
+                font-size: 17px;
+            }
+            .login_btn{
+                background-color: rgb(218, 233, 8);
+                width: 80px;
+                height: 30px;
+                border-radius: 5px;
+                color: #FFFFFF;
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+.login-box{
+ width: 100vw;
+ height: 100vh;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;    
+    .login_account{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h2{
+            font-size: 22px;
+            color: rgb(255, 217, 3);
+            margin-bottom: 10px;
+        }
+        input{
+            outline: none;
+            width:334px;
+            height: 40px;
+            border-radius: 5px 5px;
+            border-width: 1px 2px 1px 1px;
+            border-style: solid;
+            border-color: #FFFFFF;
+            font-size: 17px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }  
+            .login_btn{
+                background-color: rgb(218, 233, 8);
+                width: 220px;
+                height: 40px;
+                margin-top: 10px;
+                border-radius: 5px;
+                color: #FFFFFF;
+                font-size: 17px;
+                margin-right: 39px;
+            }
+            .close_btn{
+                background-color: rgb(233, 8, 8);
+                width: 70px;
+                height: 40px;
+                margin-top: 10px;
+                border-radius: 5px;
+                color: #FFFFFF;
+                font-size: 17px;
+            }
+        
+    }
+ 
+}

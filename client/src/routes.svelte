@@ -9,6 +9,7 @@
     import Like from './svelte/like.svelte';
     import BasketPage from './svelte/basketPage.svelte';
     import SearchPage from './svelte/searchPage.svelte';
+    import ProductPage from './svelte/productPage.svelte';
 </script>
 
 <Router>
@@ -22,4 +23,5 @@
     <Route path='/like' component = {Like}/>   
     <Route path='/basket' component = {BasketPage}/>   
     <Route path='/search' component = {SearchPage}/>   
+    <Route path= '/products' component = {ProductPage}/>
 </Router>

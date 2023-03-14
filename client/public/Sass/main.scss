@@ -402,3 +402,24 @@ footer {
         text-align: center;
     }
 }
+.container_h{
+    width: 100vw;
+    padding:  0 20px;
+}
+.nav_panel_h{
+    display: flex;
+    width: 274px;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 108px;
+
+    p {
+        font-weight: 700;
+    }
+
+    img {
+        width: 30px;
+        height: 30px;
+        align-items: center;
+    }
+}

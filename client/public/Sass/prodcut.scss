@@ -1,5 +1,5 @@
 .new_products {
-    width: 100%;
+    width: 95vw;
     height: 100%;
     margin-top: 40px;
 
@@ -153,6 +153,7 @@
         line-height: 20px;
         text-align: center;
         margin-bottom: 5px;
+        justify-content: center;
     }
     .dis_c{
         display: inline-block;
@@ -199,4 +200,107 @@
         border-bottom-right-radius: 10px;
     }
     
+}
+
+.products-box {
+    width: 95vw;
+    height: 100%;
+    margin-top: 40px;
+
+    .products {
+        display: flex;
+        flex-wrap:wrap ;
+        width: 100%;
+        height: 100%;
+        gap: 22px;
+       justify-content:flex-start;
+       margin-left: 44px;
+    }
+
+    .title {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 25px;
+        margin-bottom: 65px;
+    }
+
+    .product {
+        width: 234px;
+        height: 430px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        box-shadow: 1px 1px 20px 0px rgba(34, 60, 80, 0.2);
+        margin-bottom: 20px;
+
+        .image {
+            display: flex;
+            flex-direction: column;
+            width: 234px;
+            height: 215px;
+            margin-bottom: 30px;
+
+
+            img {
+                width: 100%;
+                height: 95%;
+                border-radius: 10px;
+
+            }
+        }
+
+        h2 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 23px;
+            margin-bottom: 20px;
+            text-align: center;
+
+        }
+
+        p {
+            width: 234px;
+            height: 60px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 15px;
+            padding-left: 7px;
+
+        }
+
+        span {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 20px;
+            text-align: center;
+            margin-bottom: 5px;
+
+        }
+
+        h3 {
+            margin-bottom: 15px;
+            color: #1FE499;
+            padding-left: 7px;
+            font-size: 14px;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 234px;
+            height: 45px;
+            background: #000000;
+            color: #FFFFFF;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
 }

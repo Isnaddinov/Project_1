@@ -83,4 +83,15 @@
   5%, 50% {
     left: -100%;
   }
+}
+.close-slider {
+  display: block;
+  width: 100vw;
+  height: 400px;
+}
+.close-slider img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
 }/*# sourceMappingURL=animation.css.map */
