@@ -1,3 +1,66 @@
 .kompaniya {
   width: 1100px;
+}
+
+.yetkazish {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+}
+.yetkazish .title {
+  width: 20%;
+  margin-left: 23px;
+  height: 100%;
+  font-size: 27px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.yetkazish .yet_intro {
+  line-height: 27px;
+}
+.yetkazish span {
+  font-weight: 900;
+  margin: 15px 0;
+}
+.yetkazish .yet_tab {
+  display: flex;
+  line-height: 44px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.yetkazish .yet_tab thead {
+  display: flex;
+  flex-direction: column;
+}
+.yetkazish .yet_tab thead th {
+  border: solid gray 1px;
+  padding: 0 15px;
+}
+.yetkazish .yet_tab tbody {
+  display: flex;
+  flex-direction: column;
+}
+.yetkazish .yet_tab tbody td {
+  border: solid gray 1px;
+  padding: 0 15px;
+}
+.yetkazish .yet_end {
+  line-height: 44px;
+}
+
+.yetkazish_k {
+  padding: 0 40px;
+}
+.yetkazish_k .title {
+  width: 40%;
+  height: 100%;
+  font-size: 27px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.yetkazish_k .yet_end {
+  line-height: 44px;
+  margin-bottom: 40px;
 }/*# sourceMappingURL=info.css.map */
