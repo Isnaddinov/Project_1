@@ -4,7 +4,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #000000b4;
+    background-color: #000000c9;
 }
 .register-box{
     .register{
@@ -44,6 +44,9 @@
                 border-radius: 5px;
                 color: #FFFFFF;
                 font-size: 17px;
+                transition: 0.3s;
+            } :hover{
+                background-color:#7000FF ;
             }
             .login_btn{
                 background-color: rgb(218, 233, 8);
@@ -52,6 +55,7 @@
                 border-radius: 5px;
                 color: #FFFFFF;
                 font-size: 17px;
+            
             }
         }
     }
@@ -97,6 +101,7 @@
                 font-size: 17px;
                 margin-right: 39px;
             }
+            }
             .close_btn{
                 background-color: rgb(233, 8, 8);
                 width: 70px;
@@ -108,5 +113,5 @@
             }
         
     }
- 
-}
+
+

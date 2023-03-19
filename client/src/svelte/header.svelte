@@ -10,7 +10,7 @@ let register:boolean
     <div class="nav_alert"><p>Eng kam buyurtma summasi 50.000 so'm</p></div>
     <div class="container_h">
         <div class={"" + (active ? "overline" : "") }></div>
-        <div class="nav_top">
+        <div class="nav_top_h">
             <div class="nav_info">
                 <div class="logo">
                     <img
@@ -62,7 +62,7 @@ let register:boolean
                 >
             </div>
         </div>
-        <div class="nav_bottom">
+        <div class="nav_bottom_h">
             <div class="others">
                 <div class="search">
                     <input type="text" placeholder="Tovarlarni qidirish" />
@@ -94,7 +94,7 @@ let register:boolean
                 </div>
             </div>
             
-                <div class="navigation">
+                <div class="navigation_h">
                         <h2 >CATEGORIES </h2>  
                     <button class = {"" + (active ? "active-icon" : "menu-icon") }   on:click="{() => active = !active}">
                         <span></span>

@@ -1,1 +1,38 @@
-<p class="kompaniya"> Kontaktar Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor similique magni nemo laborum voluptas ex repellat explicabo rerum aliquid iste nam recusandae rem cupiditate inventore autem cumque necessitatibus aliquam doloremque, iusto accusantium consequuntur delectus? Sequi quos harum explicabo maxime magnam vero optio odio rem nulla. Temporibus tempore velit itaque voluptates rerum ad quos fugiat? Et laudantium hic dolores ullam assumenda maxime ex id inventore, blanditiis praesentium totam accusamus magni culpa pariatur, deserunt neque est. Tempore officiis dolor nulla perferendis labore ab laboriosam quidem perspiciatis repellat omnis natus nemo ducimus autem, fugit sequi quisquam consequatur quam accusamus distinctio numquam. Explicabo autem nostrum, sunt inventore voluptate praesentium minima atque earum? Magnam dolorum ullam ab ipsa ex placeat ipsum error amet, optio aliquam blanditiis explicabo facere ut soluta quas in sint inventore temporibus rerum ad suscipit fuga corrupti. Veniam facere voluptate dolorem quod excepturi adipisci ut reiciendis, expedita accusantium iste ullam quasi ea possimus maxime, eius dolor autem tempore. Atque, dolore enim velit cum at, dolorum nobis vero voluptatem aliquid laboriosam natus minus aut eveniet ipsum officia delectus doloremque. Unde quo qui excepturi! Iusto voluptatem, culpa, repellat tempora ratione, non sunt voluptates harum ipsa ea sed. Necessitatibus eligendi iusto, beatae explicabo repellendus neque error dignissimos! Consequatur aliquam, voluptatum illum adipisci asperiores quaerat atque, eveniet at ea beatae aliquid exercitationem, non reprehenderit tenetur iure deserunt? Placeat magnam obcaecati fugit architecto? Cupiditate odit at, temporibus eaque a cumque. Quo optio maxime deserunt autem adipisci debitis eos assumenda doloribus, expedita voluptatem, sapiente molestiae laborum, cumque aut dicta voluptates repellat ea eius laboriosam aliquid accusantium quos. Exercitationem aut inventore quasi corrupti fugit, modi dolorem tenetur nisi, excepturi aliquid repudiandae optio est mollitia culpa maxime illum eos. Quis cupiditate voluptatem accusamus voluptate distinctio ad sit voluptatibus explicabo veritatis, amet est quidem at repellendus blanditiis. Voluptate quis fuga ipsum commodi temporibus, debitis eveniet exercitationem fugit. Sapiente, aperiam fuga consequuntur laboriosam excepturi possimus debitis quia harum est quaerat commodi dolores doloremque vel quisquam dignissimos repellat odit blanditiis optio repudiandae molestiae quam nisi voluptatem. Nemo dignissimos ducimus magnam excepturi eum fugiat veritatis, rerum delectus eos velit error debitis magni provident impedit! Ad eveniet voluptatibus ratione illo corporis minus ex dolor, tempora pariatur! Cumque nostrum nobis ipsum nam eum error nihil facere, tempore totam quaerat non quia exercitationem? Ipsa consectetur animi harum, cupiditate voluptatibus laudantium, nulla odit doloribus commodi accusamus quo. Laudantium corrupti culpa voluptates perspiciatis tempora illo ad laboriosam mollitia quod?</p>
+<script>
+    import Footer from "./footer.svelte";
+import Header from "./header.svelte";
+
+</script>
+<Header></Header>
+<div class="kontakt_info">
+    <h2>TELEFON</h2>
+    <div class="tel">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        stroke-width="1.5" stroke="currentColor" class="icon">
+        <path stroke-linecap="round" stroke-linejoin="round"
+            d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
+    </svg>
+    <p>+99890-429-01-07</p>
+    </div>
+            <h2>IJTIMOIY TARMOQLAR</h2>
+    <div class="sotset">
+        <a href="https://t.me/Isnaddinovdev"><img src="../img/telegram.png" alt="" /><span>TELEGRAM</span></a> 
+        <a href="https://t.me/Isnaddinovdev"><img src="../img/instagram.png" alt="" /><span>INSTAGRAM</span></a>
+    </div>
+       <h2>ISH VAQTI</h2>
+        <div class="vaqt">
+            <p>Sotuv bo'limi: Du-Ju с 10:00 dan 17:00 <br>
+                Omborxona: Du-Ju с 08:00 dan 17:00</p>
+        </div>
+
+        <h2>MANZIL</h2>
+        <p class="map_addres">Xorazm viloyati Urganch shahar Darital savdo majmuasi. </p>
+        <div class="map_info" style="position:relative;overflow:hidden;">
+            <a href="https://yandex.uz/maps/org/data_learning_centre/229689473868/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Data Learning Centre</a>
+            <a href="https://yandex.uz/maps/21105/urgench/category/educational_institution/184106166/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Учебный комбинат в Ургенче</a>
+            <iframe src="https://yandex.uz/map-widget/v1/?ll=60.607892%2C41.559961&mode=poi&poi%5Bpoint%5D=60.607718%2C41.559621&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D229689473868&z=19" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+    </div>        
+       
+</div>
+
+<div class="foot"><Footer></Footer></div>

@@ -1,15 +1,15 @@
-.kompaniya{
+.kompaniya {
     width: 1100px;
 }
 
-.yetkazish{
+.yetkazish {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     padding: 0 40px;
-    
-    .title{
+
+    .title {
         width: 20%;
         margin-left: 23px;
         height: 100%;
@@ -17,52 +17,116 @@
         margin-top: 20px;
         margin-bottom: 20px;
     }
-    .yet_intro{
+
+    .yet_intro {
         line-height: 27px;
     }
-    span{
+
+    span {
         font-weight: 900;
         margin: 15px 0;
     }
 
-    .yet_tab{
+    .yet_tab {
         display: flex;
         line-height: 44px;
-        margin-top:30px;
+        margin-top: 30px;
         margin-bottom: 50px;
-        thead{
+
+        thead {
             display: flex;
             flex-direction: column;
-           
-            th{
+
+            th {
                 border: solid gray 1px;
                 padding: 0 15px;
             }
         }
-        tbody{
+
+        tbody {
             display: flex;
             flex-direction: column;
-            td{
+
+            td {
                 border: solid gray 1px;
                 padding: 0 15px;
             }
         }
     }
-    .yet_end{
+
+    .yet_end {
         line-height: 44px;
     }
 }
-.yetkazish_k{
+
+.yetkazish_k {
     padding: 0 40px;
-    .title{
+
+    .title {
         width: 40%;
         height: 100%;
         font-size: 27px;
         margin-top: 20px;
         margin-bottom: 20px;
     }
-    .yet_end{
+
+    .yet_end {
         line-height: 44px;
         margin-bottom: 40px;
     }
+}
+
+.kontakt_info {
+    padding: 0 30px;
+    margin-top: 40px;
+
+    h2 {
+        font-size: 19px;
+    }
+
+    img {
+        width: 30px;
+        height: 30px;
+        align-items: center;
+    }
+
+    .tel {
+        display: flex;
+        margin: 20px 0;
+    }
+
+    .sotset {
+        display: flex;
+        flex-direction: column;
+        line-height: 44px;
+        margin: 20px 0;
+
+        a {
+            display: flex;
+            align-items: center;
+
+            span {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .vaqt {
+        margin: 20px 0;
+        line-height: 34px;
+    }
+
+    .map_addres {
+        margin: 20px 0;
+    }
+    .map_info{
+        width: 95vw;
+        iframe{
+            width: 100%;
+            border: solid 1px gray;
+        }
+    }
+}
+.foot{
+    margin-left: 30px;
 }

@@ -23,4 +23,4 @@ import Header from "./header.svelte";
         </div>
 </div>
 
-<Footer></Footer>
+<div class="foot"><Footer></Footer></div>

@@ -67,12 +67,14 @@ model products {
   img     String
   price   Decimal
   desc    String
+  count   Int @default(0)
   typesId Int
   types   types   @relation(fields: [typesId], references: [id])
 }
-model banner{
-  id Int @id @default(autoincrement())
-  img String
+
+model banner {
+  id    Int    @id @default(autoincrement())
+  img   String
   title String
 }
 

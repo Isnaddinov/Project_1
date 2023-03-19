@@ -85,11 +85,9 @@ let register:boolean
                         ><img src="./img/heart.png" alt="" /></Link
                     >
                 </div>
-                <div class="basket">
-                    <Link to="/basket"
-                        ><img src="./img/basket.png" alt="" /> Savat</Link
-                    >
-                </div>
+                <Link to="/basket"> <div class="basket">
+                   <div class="bas"><img src="./img/basket.png" alt="" /> Savat</div>
+                </div></Link>
             </Router>
         </div>
     </div>

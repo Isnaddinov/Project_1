@@ -35,4 +35,4 @@ import Header from "./header.svelte";
         являющихся нашими партнерами:</p>
 </div>
 
-<Footer></Footer>
+<div class="foot"><Footer></Footer></div>

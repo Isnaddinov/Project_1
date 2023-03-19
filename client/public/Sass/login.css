@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.7058823529);
+  background-color: rgba(0, 0, 0, 0.7882352941);
 }
 
 .register-box .register {
@@ -46,6 +46,10 @@
   border-radius: 5px;
   color: #FFFFFF;
   font-size: 17px;
+  transition: 0.3s;
+}
+.register-box .register .btn :hover {
+  background-color: #7000FF;
 }
 .register-box .register .btn .login_btn {
   background-color: rgb(218, 233, 8);
@@ -98,7 +102,7 @@
   font-size: 17px;
   margin-right: 39px;
 }
-.login-box .login_account .close_btn {
+.login-box .close_btn {
   background-color: rgb(233, 8, 8);
   width: 70px;
   height: 40px;

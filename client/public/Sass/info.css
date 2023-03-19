@@ -63,4 +63,52 @@
 .yetkazish_k .yet_end {
   line-height: 44px;
   margin-bottom: 40px;
+}
+
+.kontakt_info {
+  padding: 0 30px;
+  margin-top: 40px;
+}
+.kontakt_info h2 {
+  font-size: 19px;
+}
+.kontakt_info img {
+  width: 30px;
+  height: 30px;
+  align-items: center;
+}
+.kontakt_info .tel {
+  display: flex;
+  margin: 20px 0;
+}
+.kontakt_info .sotset {
+  display: flex;
+  flex-direction: column;
+  line-height: 44px;
+  margin: 20px 0;
+}
+.kontakt_info .sotset a {
+  display: flex;
+  align-items: center;
+}
+.kontakt_info .sotset a span {
+  margin-left: 10px;
+}
+.kontakt_info .vaqt {
+  margin: 20px 0;
+  line-height: 34px;
+}
+.kontakt_info .map_addres {
+  margin: 20px 0;
+}
+.kontakt_info .map_info {
+  width: 95vw;
+}
+.kontakt_info .map_info iframe {
+  width: 100%;
+  border: solid 1px gray;
+}
+
+.foot {
+  margin-left: 30px;
 }/*# sourceMappingURL=info.css.map */

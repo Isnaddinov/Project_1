@@ -1,1 +1,68 @@
-/*# sourceMappingURL=basket.css.map */
+.basket-box {
+  width: 95vw;
+  height: 100%;
+  display: flex;
+  margin-left: 20px;
+}
+.basket-box .bas_products {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+  margin-left: 23px;
+}
+.basket-box .bas_products .bas_product {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 20px 0px rgba(34, 60, 80, 0.2);
+}
+.basket-box .bas_products .bas_product img {
+  width: 200px;
+  height: 170px;
+  margin-right: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.basket-box .bas_products .bas_product p {
+  width: 250px;
+  margin: 0 10px;
+  padding-left: 10px;
+}
+.basket-box .bas_products .bas_product span {
+  font-weight: 900;
+  margin-right: 20px;
+}
+.basket-box .bas_products .bas_product input {
+  width: 40px;
+  margin: 0 10px;
+}
+.basket-box .bas_products .bas_product h1 {
+  margin-left: 10px;
+}
+.basket-box .order-box {
+  width: 30%;
+  height: 100vh;
+}
+
+.titles {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 27px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.titles .pro-title {
+  display: inline-block;
+  font-size: 25px;
+  margin-left: 59px;
+}
+.titles .or-title {
+  display: inline-block;
+  margin-right: 85px;
+  font-size: 25px;
+}/*# sourceMappingURL=basket.css.map */
