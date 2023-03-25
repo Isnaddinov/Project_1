@@ -49,6 +49,54 @@
     .order-box{
         width: 30%;
         height: 100vh;
+        .order{
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            gap: 10px;
+
+            input{
+                width: 190px;
+                height: 30px;
+                font-size: 16px;
+                outline: none;
+            }
+            select{
+                width: 190px;
+                height: 30px;
+                font-size: 16px;
+            }
+            .aniq_man{
+                width: 220px;
+                height: 60px;
+            }
+            .order_btns{
+                width: 260px;
+                display: flex;
+                justify-content: space-between;
+                .order_btn_saq{
+                    background-color: rgb(194, 166, 10);
+                    width: 120px;
+                    height: 30px;
+                    border-radius: 5px;
+                    color: #FFFFFF;
+                    font-size: 17px;
+                    transition: 0.3s;
+                } 
+                .order_btn_sot{
+                    background-color: rgb(7, 189, 7);
+                    width: 120px;
+                    height: 30px;
+                    border-radius: 5px;
+                    color: #FFFFFF;
+                    font-size: 17px;
+                    transition: 0.3s;
+                } 
+                :hover{
+                    background-color:#7000FF ;
+                }
+            }
+        }
     }
 }
 .titles{
@@ -68,4 +116,5 @@
         margin-right: 85px;
         font-size: 25px;
     }
+  
 }

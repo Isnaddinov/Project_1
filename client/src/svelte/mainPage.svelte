@@ -1,7 +1,11 @@
 <script lang="ts" >
     import { Router, Route, Link, link } from "svelte-navigator";
     import Login from "./login.svelte";
+    import { categoriesStore, typesStore } from '../storage/storeages'
+    import {getCategories} from '../api/category.api'
+    import {getTypesId} from '../api/type.api'
 
+    getCategories()
 
 let type:boolean = false
 let active: boolean = false
@@ -103,61 +107,20 @@ let register:boolean
 </div>
 <div class="nav_bar">
     <ul class="nav_ul"  style={"" + (active ? "display:flex" : "display:none")}>
-  <li class="list">
-      <span class="title" on:mousemove={() => type = true}>Santexnika</li>
-  <li class="list">
-      <span class="title">Santexnika</span>
-  </li>
-  <li class="list">
-      <span class="title">Santexnika</span>
-  </li>
-  <li class="list">
-      <span class="title">Santexnika</span>
-  </li>
-  <li class="list">
-      <span class="title">Santexnika</span>
-  </li>
-  <li class="list">
-      <span class="title">Santexnika</span>
-  </li>
+        {#each $categoriesStore as categor}
+        <li class="list"><span class="title" on:mousemove={() =>{ type = true, getTypesId(categor.id)}}>{categor.name}</li>  
+        {/each}
 </ul>
 <div class="type_nav" style={"" + (active ? "display:flex": "display:none")} >
-  <h2>Categor name</h2>
+  <h2></h2>
   <div class="card_box">
-     <Link to = '/products'> <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
+    {#each $typesStore as type}
+        <Link to = '/products'> <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
           <img src="../img/sement.jpeg" alt=""> 
-          <p>Type name</p>
+          <p>{type.name}</p>
        </button> </Link>
-      <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
-          <img src="../img/sement2.jpg" alt=""> 
-          <p>Type name</p>
-       </button>
-      <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
-          <img src="../img/sement3.jpg" alt=""> 
-          <p>Type name</p>
-       </button>
-      <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
-          <img src="../img/sement4.jpg" alt=""> 
-          <p>Type name</p>
-       </button>
-      <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
-          <img src="../img/sement3.jpg" alt=""> 
-          <p>Type name</p>
-       </button>
-      <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
-          <img src="../img/sement4.jpg" alt=""> 
-          <p>Type name</p>
-       </button>
-      <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
-          <img src="../img/sement3.jpg" alt=""> 
-          <p>Type name</p>
-       </button>
-      <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
-          <img src="../img/sement4.jpg" alt=""> 
-          <p>Type name</p>
-       </button>
-      
-      
+    {/each}
+     
     </div>           
 </div>
 </div>

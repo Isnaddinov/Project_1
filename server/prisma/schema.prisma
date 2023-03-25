@@ -25,7 +25,7 @@ model basket {
 }
 
 model order {
-  id           Int     @id @default(autoincrement())
+  id           Int    @id @default(autoincrement())
   name         String
   surname      String
   phone        String
@@ -33,9 +33,9 @@ model order {
   tuman        String
   shahar       String
   aniq_adress  String
-  umumiybahosi Decimal
+  umumiybahosi Int
   products     Int[]
-  status       String  @default("saqlangan")
+  status       status @default(active)
   basketId     Int
 }
 
@@ -62,14 +62,15 @@ model types {
 }
 
 model products {
-  id      Int     @id @default(autoincrement())
-  name    String
-  img     String
-  price   Decimal
-  desc    String
-  count   Int @default(0)
-  typesId Int
-  types   types   @relation(fields: [typesId], references: [id])
+  id       Int     @id @default(autoincrement())
+  name     String
+  img      String
+  price    Int
+  desc     String
+  count    Int     @default(0)
+  discount Int     @default(0)
+  typesId  Int
+  types    types   @relation(fields: [typesId], references: [id])
 }
 
 model banner {
@@ -81,4 +82,9 @@ model banner {
 enum role {
   user
   admin
+}
+
+enum status {
+  saqlangan
+  active
 }

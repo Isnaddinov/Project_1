@@ -1,6 +1,6 @@
 import {Router} from 'express'
 import { postProducts, updateProducts, deleteProducts, getAllProducts, 
-    getProductbyId,  getSearchProduct, getProductsbyTypeId } from '../controllers/products'
+    getProductbyId,  getSearchProduct, getProductsbyTypeId, getDiscountroducts } from '../controllers/products'
 import { uploadFile } from '../middlewares/uploads'
 import { productsCheck } from '../validators/products'
 import { userMiddleWhere } from '../middlewares/userMiddlewere'
@@ -11,6 +11,7 @@ router.post('/post/admin',  uploadFile(), userMiddleWhere, productsCheck(), post
 router.get('/getbytypeid/:id', getProductsbyTypeId)
 router.get('/getbyid/:id', getProductbyId)
 router.get('/getbysearch', getSearchProduct)
+router.get('/get/discount', getDiscountroducts)
 router.get('/getall/admin', userMiddleWhere, getAllProducts)
 router.put('/put/admin/:id',  uploadFile(), userMiddleWhere, productsCheck(), updateProducts)
 router.delete('/delete/admin/:id', userMiddleWhere, deleteProducts)

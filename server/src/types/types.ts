@@ -22,9 +22,10 @@ export type Order = {
     aniq_adress:  string
     umummiybahosi: number
     productsId: number[]
-    status: string
+    status: any
     basketId: number
 }
+
 
 export type Categories = {
     id: number

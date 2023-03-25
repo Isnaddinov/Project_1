@@ -75,12 +75,13 @@
                         {/each}
                     </div>
                     <div class="order-box">
-                        <h2>{umumiy}</h2>
+                        <h2> Umumiy narx : {umumiy} so'm</h2>
                         <div class="order">
                             <input type="text" placeholder="Ismingiz">
                             <input type="text" placeholder="Familyangiz">
                             <input type="text" placeholder="Telefongiz">
-                            <section placeholder="Viloyatingiz">
+                            <select placeholder="Viloyatingiz" >
+                                <option value="">Viloyatni tanlang</option>
                                 <option value="Xorazm">Xorazm</option>
                                 <option value="Toshkent shahri">Toshkent shahri</option>
                                 <option value="Qoraqolpog'izton">Qoraqolpog'izton</option>
@@ -88,15 +89,19 @@
                                 <option value="Surxandaryo">Surxandaryo</option>
                                 <option value="Qashqadaryo">Qashqadaryo</option>
                                 <option value="Namangan">Namangan</option>
-                                <option value="Andijon">`Andijon`</option>
-                                <option value="Xorazm">Sirdaryo</option>
-                                <option value="Xorazm">Xorazm</option>
-                                <option value="Xorazm">Xorazm</option>
-                                <option value="Xorazm">Xorazm</option>
-                            </section>
+                                <option value="Andijon">Andijon</option>
+                                <option value="Toshken vil.">Toshken vil.</option>
+                                <option value="Jizzax">Jizzax</option>
+                                <option value="Samarqand">Samarqand</option>
+                                <option value="Buxoro">Buxoro</option>
+                            </select>
                             <input type="text" placeholder="Tumaningiz">
                             <input type="text" placeholder="Shahriniz">
-                            <input type="text" placeholder="Aniq manzilingiz">
+                            <input class="aniq_man" type="text" placeholder="Aniq manzilingiz">
+                        <div class="order_btns">
+                            <button class="order_btn_saq">Saqlash</button>
+                            <button class="order_btn_sot">Sotib olish</button>
+                         </div>    
                         </div>
                     </div>
                 </div>
