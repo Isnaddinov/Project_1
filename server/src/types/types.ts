@@ -42,6 +42,7 @@ export type Products = {
     name: string
     desc: string
     price: number
+    discount: number
     type_id: number
 }
 export type Count = {

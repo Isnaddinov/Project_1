@@ -1,5 +1,6 @@
 <script>
-    import Footer from "./footer.svelte";
+    import { productsStore } from "../storage/storeages";
+import Footer from "./footer.svelte";
 import Header from "./header.svelte";
 
 </script>
@@ -9,105 +10,17 @@ import Header from "./header.svelte";
 <div class="products-box">
     <h3 class="title">Tovarlar</h3>
     <div class="products">
+       {#each $productsStore as product}
         <div class="product">
+                
                 <div class="image"><img src="./img/Product1.jpg" alt=""></div>
-                <h2>Name</h2>
-                <p>Description</p>
-                <span>120000 so'm</span>
+                <h2>{product.name}</h2>
+                <p>{product.desc}</p>
+                <span>{product.price} so'm</span>
                 <button>Savatga tashlash</button>
+                
         </div>
-        <div class="product">
-                <div class="image"><img src="./img/Product1.jpg" alt=""></div>
-                <h2>Name</h2>
-                <p>Description</p>
-                <span>120000 so'm</span>
-                <button>Savatga tashlash</button>
-        </div>
-        <div class="product">
-                <div class="image"><img src="./img/Product1.jpg" alt=""></div>
-                <h2>Name</h2>
-                <p>Description</p>
-                <span>120000 so'm</span>
-                <button>Savatga tashlash</button>
-        </div>
-        <div class="product">
-                <div class="image"><img src="./img/Product1.jpg" alt=""></div>
-                <h2>Name</h2>
-                <p>Description</p>
-                <span>120000 so'm</span>
-                <button>Savatga tashlash</button>
-        </div>
-        <div class="product">
-                <div class="image"><img src="./img/Product1.jpg" alt=""></div>
-                <h2>Name</h2>
-                <p>Description</p>
-                <span>120000 so'm</span>
-                <button>Savatga tashlash</button>
-        </div>
-        <div class="product">
-                <div class="image"><img src="./img/Product1.jpg" alt=""></div>
-                <h2>Name</h2>
-                <p>Description</p>
-                <span>120000 so'm</span>
-                <button>Savatga tashlash</button>
-        </div>
-        <div class="product">
-                <div class="image"><img src="./img/Product1.jpg" alt=""></div>
-                <h2>Name</h2>
-                <p>Description</p>
-                <span>120000 so'm</span>
-                <button>Savatga tashlash</button>
-        </div>
-        <div class="product">
-                <div class="image"><img src="./img/Product1.jpg" alt=""></div>
-                <h2>Name</h2>
-                <p>Description</p>
-                <span>120000 so'm</span>
-                <button>Savatga tashlash</button>
-        </div>
-        <div class="product">
-                <div class="image"><img src="./img/Product1.jpg" alt=""></div>
-                <h2>Name</h2>
-                <p>Description</p>
-                <span>120000 so'm</span>
-                <button>Savatga tashlash</button>
-        </div>
-        <div class="product">
-                <div class="image"><img src="./img/Product1.jpg" alt=""></div>
-                <h2>Name</h2>
-                <p>Description</p>
-                <span>120000 so'm</span>
-                <button>Savatga tashlash</button>
-        </div>
-        <div class="product">
-                <div class="image"><img src="./img/Product1.jpg" alt=""></div>
-                <h2>Name</h2>
-                <p>Description</p>
-                <span>120000 so'm</span>
-                <button>Savatga tashlash</button>
-        </div>
-        <div class="product">
-                <div class="image"><img src="./img/Product1.jpg" alt=""></div>
-                <h2>Name</h2>
-                <p>Description</p>
-                <span>120000 so'm</span>
-                <button>Savatga tashlash</button>
-        </div>
-        <div class="product">
-                <div class="image"><img src="./img/Product1.jpg" alt=""></div>
-                <h2>Name</h2>
-                <p>Description</p>
-                <span>120000 so'm</span>
-                <button>Savatga tashlash</button>
-        </div>
-        <div class="product">
-                <div class="image"><img src="./img/Product1.jpg" alt=""></div>
-                <h2>Name</h2>
-                <p>Description</p>
-                <span>120000 so'm</span>
-                <button>Savatga tashlash</button>
-        </div>
-        
+        {/each}
     </div>
   </div>
 

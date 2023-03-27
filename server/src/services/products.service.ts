@@ -18,21 +18,21 @@ export async function findProductByName(name: string){
    } catch (error) {
     console.error("Error with search product service by name " + error);  }
 }
-export async function writeProduct(name: string, img: string, price: number, desc: string, type_id: number){
+export async function writeProduct(name: string, img: string, price: number, desc: string, discount: number, type_id: number){
    try {
-    return await client.products.create({ data:{name:name, img:img, price:price, desc:desc, typesId:type_id} })
+    return await client.products.create({ data:{name:name, img:img, price:price, desc:desc, discount:discount, typesId:type_id} })
    } catch (error) {
     console.error("Error with write product service " + error);  }
 }
-export async function putProduct(id:number, name: string, img: string, price: number, desc: string){
+export async function putProduct(id:number, name: string, img: string, price: number, desc: string, discount: number){
    try {
-    return await client.products.update({ where:{id:id}, data:{name:name, img:img, price:price, desc:desc} })
+    return await client.products.update({ where:{id:id}, data:{name:name, img:img, price:price, desc:desc, discount:discount} })
    } catch (error) {
     console.error("Error with put product service " + error);  }
 }
-export async function putProduct1(id:number, name: string, img: string, price: number, desc: string, type_id: number){
+export async function putProduct1(id:number, name: string, img: string, price: number, desc: string, discount: number, type_id: number){
    try {
-    return await client.products.update({ where:{id:id}, data:{name:name, img:img, price:price, desc:desc, typesId:type_id} })
+    return await client.products.update({ where:{id:id}, data:{name:name, img:img, price:price, desc:desc, discount:discount, typesId:type_id} })
    } catch (error) {
     console.error("Error with put product service 1 " + error);  }
 }

@@ -51,10 +51,10 @@ export async function postProducts(req: Request, res: Response) {
     const body: Products = req.body
     const img = String(req.file?.path)
     if (img == undefined || null) { res.status(400).json({ message: "Must be product_img" }) }
-    const { name, price, desc, type_id } = body
+    const { name, price, desc, discount, type_id } = body
     const type = await findTypeById(+type_id)
     if (!type){ return res.status(404).json({ message: "Type not found by typeId" })}
-    const newProduct = await writeProduct(name, img, price, desc, +type_id)
+    const newProduct = await writeProduct(name, img, price, desc, discount, +type_id)
     res.status(200).json({ message: "Product has writed", newProduct })
   } catch (error) {
     res.status(400).json({ message: "Error with write product" + error })
@@ -75,13 +75,13 @@ export async function updateProducts(req: Request, res: Response) {
     const findProduct = await findProductById(id)
     if(!findProduct){return res.status(400).json({message:"Product not found by Id"})}
     if (img === null || undefined) { res.status(400).json({ message: "Must be product_img" }) }
-    const { name, desc, price, type_id } = body
+    const { name, desc, price, discount, type_id } = body
     if (type_id == undefined || null) {
-      const product = await putProduct(id, name, img, price, desc)
+      const product = await putProduct(id, name, img, price, desc,  discount)
       res.status(200).json({ message: "Product has updated", product })}
       const type = findTypeById(+type_id)
       if (!type){ return res.status(404).json({ message: "Type not found by typeId" })}
-    const product = await putProduct1(id, name, img, price, desc, +type_id)
+    const product = await putProduct1(id, name, img, price, desc, discount, +type_id)
     res.status(200).json({ message: "Product has updated", product })
   } catch (error) {
     res.status(400).json({ message: "Error with update product " + error })

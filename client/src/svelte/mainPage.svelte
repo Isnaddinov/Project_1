@@ -4,6 +4,7 @@
     import { categoriesStore, typesStore } from '../storage/storeages'
     import {getCategories} from '../api/category.api'
     import {getTypesId} from '../api/type.api'
+    import {getProductsByTypeId} from '../api/product.api'
 
     getCategories()
 
@@ -112,10 +113,10 @@ let register:boolean
         {/each}
 </ul>
 <div class="type_nav" style={"" + (active ? "display:flex": "display:none")} >
-  <h2></h2>
+  <h2>Types</h2>
   <div class="card_box">
-    {#each $typesStore as type}
-        <Link to = '/products'> <button style={"" + (type ?  "display:block": "display:none")} class="type_card">
+    {#each $typesStore as type} 
+        <Link to = '/products'> <button on:click={() => getProductsByTypeId(type.id)} style={"" + (type ?  "display:block": "display:none")} class="type_card">
           <img src="../img/sement.jpeg" alt=""> 
           <p>{type.name}</p>
        </button> </Link>
