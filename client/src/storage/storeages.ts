@@ -8,3 +8,5 @@ export const typesStore:Writable<Types[]> = writable([])
 export const productsStore:Writable<Products[]> = writable([])
 
 export const searchProductStore:Writable<Products[]> = writable([])
+
+export const discountProductStore:Writable<Products[]> = writable([])

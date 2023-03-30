@@ -1,16 +1,23 @@
 <script lang="ts" >
     import { Router, Route, Link, link } from "svelte-navigator";
     import Login from "./login.svelte";
-    import { categoriesStore, typesStore } from '../storage/storeages'
+    import { categoriesStore, discountProductStore, typesStore } from '../storage/storeages'
     import {getCategories} from '../api/category.api'
     import {getTypesId} from '../api/type.api'
-    import {getProductsByTypeId} from '../api/product.api'
+    import {getProductsBySearch, getProductsByTypeId, getProductsByDiscount} from '../api/product.api'
 
     getCategories()
+    getProductsByDiscount()
 
 let type:boolean = false
 let active: boolean = false
 let register:boolean
+
+let product:string = ''
+
+async function searcher(){
+    await getProductsBySearch(product)
+}
 
 
 </script>
@@ -70,13 +77,9 @@ let register:boolean
 <div class="nav_bottom">
     <div class="others">
         <div class="search">
-            <input type="text" placeholder="Tovarlarni qidirish" />
+            <input type="text" placeholder="Tovarlarni qidirish"  bind:value={product}/>
             <Router>
-                <button
-                    ><Link to="/search"
-                        ><img src="./img/search.png" alt="" /></Link
-                    ></button
-                >
+                <Link to="/search"><button on:click={() => searcher()}><img src="./img/search.png" alt="" /></button></Link>
             </Router>
         </div>
         <div class="controllers">
@@ -187,38 +190,15 @@ let register:boolean
 <button class="categories-box">
     <h2>Kategoirayalar</h2>
     <div class="categories">
-         <div class="category">
+    {#each $categoriesStore as categor}
+       <Link to = '/types'>  <button on:click={() => getTypesId(categor.id)} class="category">
         <img src="../img/categor.jpg" alt="">
-        <h3>Categor name</h3>
-    </div>
-         <div class="category">
-        <img src="../img/categor.jpg" alt="">
-        <h3>Categor name</h3>
-    </div>
-         <div class="category">
-        <img src="../img/categor.jpg" alt="">
-        <h3>Categor name</h3>
-    </div>
-         <div class="category">
-        <img src="../img/categor.jpg" alt="">
-        <h3>Categor name</h3>
-    </div>
-         <div class="category">
-        <img src="../img/categor.jpg" alt="">
-        <h3>Categor name</h3>
-    </div>
-         <div class="category">
-        <img src="../img/categor.jpg" alt="">
-        <h3>Categor name</h3>
-    </div>
-         <div class="category">
-        <img src="../img/categor.jpg" alt="">
-        <h3>Categor name</h3>
-    </div>
-         <div class="category">
-        <img src="../img/categor.jpg" alt="">
-        <h3>Categor name</h3>
-    </div>
+        <h3>{categor.name}</h3>
+         </button>
+        </Link>
+    {/each}
+    
+        
     </div>
    
 </button>
@@ -227,34 +207,16 @@ let register:boolean
 <div class="new_products">
     <h3 class="discount_title">Chegirmali tovarlar</h3>
     <div class="products">
-        <div class="dis_product">
-                <div class="image"><span class="discount_s">Chegirma</span> <span class="dis_c">-40%</span><img src="./img/Product1.jpg" alt=""></div>
-                <h2 class="dis_title">Name</h2>
-                <p>Description</p>
-                <span class="dis_price" >480000 so'm <sup><del class="dis_del">120000</del></sup></span>
+        {#each $discountProductStore as product}
+            <div class="dis_product">
+                <div class="image"><span class="discount_s">Chegirma</span> <span class="dis_c">-{product.discount}%</span><img src="./img/Product1.jpg" alt=""></div>
+                <h2 class="dis_title">{product.name}</h2>
+                <p>{product.desc}</p>
+                <span class="dis_price" >{(product.discount * product.price) / 100} so'm <sup><del class="dis_del">{product.price} so'm</del></sup></span>
                 <button>Savatga tashlash</button>
         </div>
-        <div class="dis_product">
-                <div class="image"><span class="discount_s">Chegirma</span> <span class="dis_c">-40%</span><img src="./img/Product1.jpg" alt=""></div>
-                <h2 class="dis_title">Name</h2>
-                <p>Description</p>
-                <span class="dis_price" >480000 so'm <sup><del class="dis_del">120000</del></sup></span>
-                <button>Savatga tashlash</button>
-        </div>
-        <div class="dis_product">
-                <div class="image"><span class="discount_s">Chegirma</span> <span class="dis_c">-40%</span><img src="./img/Product1.jpg" alt=""></div>
-                <h2 class="dis_title">Name</h2>
-                <p>Description</p>
-                <span class="dis_price" >480000 so'm <sup><del class="dis_del">120000</del></sup></span>
-                <button>Savatga tashlash</button>
-        </div>
-        <div class="dis_product">
-                <div class="image"><span class="discount_s">Chegirma</span> <span class="dis_c">-40%</span><img src="./img/Product1.jpg" alt=""></div>
-                <h2 class="dis_title">Name</h2>
-                <p>Description</p>
-                <span class="dis_price" >480000 so'm <sup><del class="dis_del">120000</del></sup></span>
-                <button>Savatga tashlash</button>
-        </div>
+        {/each}
+        
         
     </div>
   </div>

@@ -100,13 +100,14 @@ export async function deleteProducts(req: Request, res: Response) {
   }
 
 }
-export async function getAllProducts(res: Response) {
+export async function getAllProducts(req:Request,res: Response) {
   try {
     const allProducts = await allProductsGet()
     res.status(200).json({ message: "All products", allProducts })
   } catch (error) {
     res.status(400).json({ message: "Error with All products get " + error })}}
-export async function getDiscountroducts(res: Response) {
+
+export async function getDiscountroducts(req:Request, res: Response) {
   try {
     const allProducts = await allProductsGet()
     const discountProducts = allProducts?.filter((products) => products.discount > 0)

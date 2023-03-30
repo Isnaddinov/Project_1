@@ -162,6 +162,10 @@
         font-weight: 700;
         margin-left: 22px;
     }
+    .dis_del{
+        font-size: 15px;
+        margin-left: 5px;
+    }
     .dis_title{
         font-style: normal;
             font-weight: 700;
@@ -205,7 +209,7 @@
 .products-box {
     width: 95vw;
     height: 100%;
-    margin-top: 40px;
+    margin-top: 20px;
 
     .products {
         display: flex;
@@ -223,7 +227,7 @@
         font-weight: 700;
         font-size: 25px;
         line-height: 25px;
-        margin-bottom: 65px;
+        margin-bottom: 25px;
     }
 
     .product {

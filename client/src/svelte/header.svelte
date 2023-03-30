@@ -10,7 +10,9 @@ let product:string = ''
 
     getCategories()
     
-    console.log(product);
+    async function find(){
+      await  getProductsBySearch(product)
+    }
     
 let type:boolean = false
 let active: boolean = false
@@ -76,8 +78,9 @@ let register:boolean
             <div class="others">
                 <div class="search">
                     <Router>
-                        <input value={product}  type="text" placeholder="Tovarlarni qidirish"/>
-                        <button on:click={ () => getProductsBySearch(product)}><Link to="/search"><img src="./img/search.png" alt="" /></Link></button>
+                        <input type="text" placeholder="Tovarlarni qidirish" bind:value={product}/>
+
+                        <button on:click={ () => find()}><Link to="/search"><img src="./img/search.png" alt="" /></Link></button>
                     </Router>
                 </div>
                 <div class="controllers">

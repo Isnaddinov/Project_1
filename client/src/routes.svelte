@@ -10,6 +10,8 @@
     import BasketPage from './svelte/basketPage.svelte';
     import SearchPage from './svelte/searchPage.svelte';
     import ProductPage from './svelte/productPage.svelte';
+    import Types from './svelte/typesPage.svelte';
+    import TypesPage from './svelte/typesPage.svelte';
 </script>
 
 <Router>
@@ -24,4 +26,5 @@
     <Route path='/basket' component = {BasketPage}/>   
     <Route path='/search' component = {SearchPage}/>   
     <Route path= '/products' component = {ProductPage}/>
+    <Route path= '/types' component = {TypesPage}/>
 </Router>

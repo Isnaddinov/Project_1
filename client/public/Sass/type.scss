@@ -74,7 +74,7 @@
         height: 100%;
         display: flex;
         flex-wrap: wrap;
-        justify-content:space-around;
+        gap:55px;
         padding: 0px 75px 0px 75px;
         .category {
             border-radius: 5px;
@@ -95,4 +95,13 @@
         }
     }
 
+}
+.types-box{
+    margin-top: 40px;
+
+    .types_title{
+        font-size: 27px;
+        margin-left: 60px;
+        margin-bottom: 30px;
+    }
 }
