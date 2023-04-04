@@ -4,6 +4,7 @@
     import { categoriesStore, discountProductStore, typesStore } from '../storage/storeages'
     import {getCategories} from '../api/category.api'
     import {getTypesId} from '../api/type.api'
+    import { getBasket } from "../api/basket.api";
     import {getProductsBySearch, getProductsByTypeId, getProductsByDiscount} from '../api/product.api'
 
     getCategories()
@@ -18,6 +19,10 @@ let product:string = ''
 async function searcher(){
     await getProductsBySearch(product)
 }
+async function basket() {
+        const token = localStorage.getItem('userToken')
+        await getBasket(token)
+    }
 
 
 </script>
@@ -93,7 +98,7 @@ async function searcher(){
                         ><img src="./img/heart.png" alt="" /></Link
                     >
                 </div>
-                <Link to="/basket"> <div class="basket">
+                <Link to="/basket" on:click={() => basket()}> <div class="basket">
                    <div class="bas"><img src="./img/basket.png" alt="" /> Savat</div>
                 </div></Link>
             </Router>
@@ -212,7 +217,7 @@ async function searcher(){
                 <div class="image"><span class="discount_s">Chegirma</span> <span class="dis_c">-{product.discount}%</span><img src="./img/Product1.jpg" alt=""></div>
                 <h2 class="dis_title">{product.name}</h2>
                 <p>{product.desc}</p>
-                <span class="dis_price" >{(product.discount * product.price) / 100} so'm <sup><del class="dis_del">{product.price} so'm</del></sup></span>
+                <span class="dis_price" >{product.price -((product.discount * product.price)/ 100) } so'm <sup><del class="dis_del">{product.price} so'm</del></sup></span>
                 <button>Savatga tashlash</button>
         </div>
         {/each}

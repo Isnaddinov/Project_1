@@ -12,9 +12,9 @@ export async function findBasketByUserId(id:number){
     return find?.id
 }
 
-export async function WriteBasket(id:number){
+export async function WriteBasket(name:string,userId:number){
     try {
-        return await client.basket.create({ data:{userId:id}});
+        return await client.basket.create({ data:{name:name, userId:userId}});
         
     } catch (error) {
         console.error("Errro with service write basket " + error);}

@@ -30,15 +30,15 @@ export async function regisratsion(req: Request, res: Response) {
 }
 export async function login(req: Request, res: Response) {
     try {
-        const body:User = req.body
-        const {username, password, role} = body
-        const user = await findUserByUsername(username) 
+        
+        const {username, password, role} = req.query
+        const user = await findUserByUsername(String(username)) 
         if(!user){
           return  res.status(400).json({message: `Bunday ${username} usernameli foydalanuvchi topilmadi `})
         }
-        const validPassword = bcrypt.compareSync(password, user.password)
+        const validPassword = bcrypt.compareSync(String(password), user.password)
         if(!validPassword){
-            return res.status(400).json({mesaage: 'Parol xato kiritilgan'})
+            return res.status(400).json({message: 'Parol xato kiritilgan'})
         }
         const token = generateAccessToken(user.id,user.role)
         return res.status(200).json({message: "All rihgt", token})

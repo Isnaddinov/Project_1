@@ -9,6 +9,9 @@ import {searchProductStore} from '../storage/storeages'
         <div class="products-box">
                 <h3 class="title">Tovarlar</h3>
                 <div class="products">
+                    {#if $searchProductStore.length === 0}
+                    <h1>No Product</h1>
+                  {/if}
                    {#each $searchProductStore as product}
                     <div class="product">
                             <div class="image"><img src="./img/Product1.jpg" alt=""></div>

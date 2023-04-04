@@ -9,7 +9,8 @@ export type User = {
 
 export type Basket = {
     id: number
-    user_token: string
+    name: string
+    userId: string
 }
 
 export type Order = {

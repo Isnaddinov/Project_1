@@ -16,3 +16,15 @@ export type Products = {
     discount: number
     type_id: number
 }
+export type User = {
+    id: number
+    name: string
+    username: string
+    password: string
+    role: any | undefined
+}
+export type Basket = {
+    id: number
+    name: string
+    userId: number
+}

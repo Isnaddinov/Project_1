@@ -1,15 +1,33 @@
  import axios from "axios";
  import { productsStore, searchProductStore, discountProductStore } from "../storage/storeages";
+ 
+ const url = `http://localhost:9090/stroyapi`
+
   export async function getProductsByTypeId(id:number){
-    const products = await axios.get(`http://localhost:9090/stroyapi/products/getbytypeid/${id}`)
-    productsStore.set(products.data.products)
+    try {
+      const products = await axios.get(url + `/products/getbytypeid/${id}`)
+       productsStore.set(products.data.products)
+    } catch (err:any) {
+      alert(err.message);
+      return null
+    }
   }
 
   export async function getProductsBySearch(product:string){
-    const products = await axios.get(`http://localhost:9090/stroyapi/products/getbysearch?name=${product}`)
+   try {
+    const products = await axios.get(url + `/getbysearch?name=${product}`)
     searchProductStore.set(products.data.products)
+   } catch (err:any) {
+    alert(err.message);
+    return null
+   }
   }
   export async function getProductsByDiscount(){
-    const products = await axios.get(`http://localhost:9090/stroyapi/products/get/discount`)
+    try {
+      const products = await axios.get(url + `/products/get/discount`)
     discountProductStore.set(products.data.discountProducts)
+    } catch (err:any) {
+      alert(err.message);
+      return null
+    }
   }

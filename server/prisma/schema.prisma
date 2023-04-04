@@ -21,6 +21,7 @@ model user {
 
 model basket {
   id     Int @id @default(autoincrement())
+  name   String 
   userId Int @unique
 }
 

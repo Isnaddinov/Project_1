@@ -10,6 +10,9 @@ import Header from "./header.svelte";
 <div class="products-box">
     <h3 class="title">Tovarlar</h3>
     <div class="products">
+      {#if $productsStore.length === 0}
+        <h1>No Product</h1>
+      {/if}
        {#each $productsStore as product}
         <div class="product">
                 

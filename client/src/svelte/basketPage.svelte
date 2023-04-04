@@ -1,6 +1,8 @@
 <script lang="ts">
-    import Footer from "./footer.svelte";
+    import { basketStorage } from "../storage/storeages";
+import Footer from "./footer.svelte";
     import Header from "./header.svelte";
+    
     type Product = {
         id: number;
         name: string;
@@ -10,6 +12,7 @@
         type_id: number;
     };
 
+    
     let products: Product[] = [
         {
             id: 1,
@@ -44,17 +47,25 @@
             type_id: 1,
         },
     ];
+    
     let umumiy: number = 0;
+   
 </script>
 
 <Header />
 <div class="titles">
     <h3 class="pro-title">Tovarlar</h3>
+    {#each $basketStorage as storage }
+    <h2 class="bas_name">Assalomu Alaykum {storage.name} </h2>
+    {/each}
+        
+    
 <h3 class="or-title">Rasmiylashtirish</h3>
 </div>
 <div class="basket-box">
     <div class="bas_products">
         
+      
 
             {#each products as product}
                         <div class="bas_product">

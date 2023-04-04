@@ -7,7 +7,7 @@ import { loginCheck } from '../validators/users'
 const router = Router()
 
 router.post('/regisratsion', loginCheck(), regisratsion)
-router.post('/login',login)
+router.get('/login',login)
 router.get('/auth/admin', userMiddleWhere ,getUsers)
 
 export default router

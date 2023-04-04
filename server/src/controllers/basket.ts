@@ -15,7 +15,7 @@ export async function getBasket(req: Request, res: Response) {
         const user = await findUserById(id)
         if (!user) { return res.status(400).json({ message: "User not found" }) }
         const loginBasket = await getByUserId(id)
-        return res.status(200).json({ message: "Basket getted ", loginBasket })
+        return res.status(200).json({ message: "Basket got ", loginBasket })
     } catch (error) {
         res.status(400).json({ message: "Error get basket" + error })
     }
@@ -24,12 +24,12 @@ export async function getBasket(req: Request, res: Response) {
 export async function postBasket(req: Request, res: Response) {
     try {
         const body: Basket = req.body
-        const {user_token } = body
-        const { id } = Object(jwt.verify(String(user_token), SEC_KEY))
-        const basket = await WriteBasket(id)
+        const {name, userId } = body
+        const  {id} = Object(jwt.verify(userId, SEC_KEY))
+        const basket = await WriteBasket(name, id)
         if(!basket){return res.status(400).json({ message: "One Basket for One user" })}
-        const useId = generateUserIdToken(Number(basket.userId))
-        const newBasket = {id:basket.id, userId:useId }
+        const user_id = generateUserIdToken(Number(basket.userId))
+        const newBasket = {id:basket.id, name:basket.name, userId:userId }
         return res.status(200).json({ message: "Basket writed ", newBasket})
     } catch (error) {
         res.status(400).json({ message: "Error post basket" + error })

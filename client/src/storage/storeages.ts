@@ -1,5 +1,5 @@
 import {Writable, writable } from "svelte/store";
-import { Categories, Types, Products } from "../types/types";
+import { Categories, Types, Products, User, Basket } from "../types/types";
 
 export const categoriesStore:Writable<Categories[]> = writable([])
 
@@ -10,3 +10,7 @@ export const productsStore:Writable<Products[]> = writable([])
 export const searchProductStore:Writable<Products[]> = writable([])
 
 export const discountProductStore:Writable<Products[]> = writable([])
+
+export const registerStore:Writable<User[]> = writable([])
+
+export const basketStorage:Writable<Basket[]> = writable([])
