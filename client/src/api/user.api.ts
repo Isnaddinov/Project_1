@@ -29,6 +29,7 @@ export async function registerUser(name:string, username:string, password:string
 export async function loginUser(username:string, password:string){
     try {
         const user = await axios.get(url + `/user/login?username=${username}&password=${password}`)
+
         if(user.data.message === "All rihgt"){
             alert(`You are login in site`)
         }

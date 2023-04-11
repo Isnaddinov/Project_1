@@ -2,7 +2,7 @@ import { client } from "../routers/prismaclient.routes";
 
 export async function getByUserId(id:number){
     try {
-        return await client.basket.findUnique({where:{userId:id}})
+        return await client.basket.findMany({where:{userId:id}})
      
     } catch (error) {
         console.error("Errro with service get basket " + error);}

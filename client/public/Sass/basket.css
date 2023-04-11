@@ -43,6 +43,13 @@
 .basket-box .bas_products .bas_product h1 {
   margin-left: 10px;
 }
+.basket-box .bas_products .bas_product .pluser {
+  width: 30px;
+  height: 30px;
+}
+.basket-box .bas_products .bas_product .offplus {
+  width: 40px;
+}
 .basket-box .order-box {
   width: 30%;
   height: 100vh;
@@ -116,4 +123,8 @@
 
 .bas_name {
   font-size: 22px;
+}
+
+.alert_bas {
+  font-size: 25px;
 }/*# sourceMappingURL=basket.css.map */

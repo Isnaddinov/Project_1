@@ -5,6 +5,7 @@
     import {getCategories} from '../api/category.api'
     import {getTypesId} from '../api/type.api'
     import {getProductsByTypeId, getProductsBySearch} from '../api/product.api'
+    import { getBasket } from "../api/basket.api";
 
 let product:string = ''
 
@@ -13,7 +14,11 @@ let product:string = ''
     async function find(){
       await  getProductsBySearch(product)
     }
-    
+    async function basket() {
+        const token = localStorage.getItem('userToken')
+        await getBasket(token)
+    }
+
 let type:boolean = false
 let active: boolean = false
 let register:boolean
@@ -94,11 +99,9 @@ let register:boolean
                                 ><img src="./img/heart.png" alt="" /></Link
                             >
                         </div>
-                        <div class="basket">
-                            <Link to="/basket"
-                                ><img src="./img/basket.png" alt="" /> Savat</Link
-                            >
-                        </div>
+                        <Link to="/basket" on:click={() => basket()}><div class="basket">
+                            <img src="./img/basket.png" alt="" /> Savat
+                        </div></Link>
                     </Router>
                 </div>
             </div>

@@ -8,7 +8,7 @@ export async function productByTypeId(type_id: number){
 }
 export async function findProductById(id: number){
    try {
-    return await client.products.findUnique({ where: { id: id } })
+    return await client.products.findMany({ where: { id: id } })
    } catch (error) {
     console.error("Error with get product service by id " + error);  }
 }

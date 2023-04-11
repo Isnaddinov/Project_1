@@ -1,12 +1,13 @@
  import axios from "axios";
- import { productsStore, searchProductStore, discountProductStore } from "../storage/storeages";
+ import { productsStore, searchProductStore, discountProductStore, getBasketProductsStorage } from "../storage/storeages";
  
- const url = `http://localhost:9090/stroyapi`
+ const url = `http://localhost:9090/stroyapi`;
 
   export async function getProductsByTypeId(id:number){
     try {
       const products = await axios.get(url + `/products/getbytypeid/${id}`)
-       productsStore.set(products.data.products)
+      return  productsStore.set(products.data.products)
+      
     } catch (err:any) {
       alert(err.message);
       return null
@@ -15,8 +16,9 @@
 
   export async function getProductsBySearch(product:string){
    try {
-    const products = await axios.get(url + `/getbysearch?name=${product}`)
-    searchProductStore.set(products.data.products)
+    const products = await axios.get(url + `/products/getbysearch?name=${product}`)
+    return searchProductStore.set(products.data.products)
+
    } catch (err:any) {
     alert(err.message);
     return null
@@ -26,6 +28,20 @@
     try {
       const products = await axios.get(url + `/products/get/discount`)
     discountProductStore.set(products.data.discountProducts)
+    } catch (err:any) {
+      alert(err.message);
+      return null
+    }
+  }
+  export async function getProductsById(id:number){
+    try {
+      const products = await axios.get(url + `/products/getbyid/${id}`)
+      getBasketProductsStorage.set(products.data.product)
+
+      if(products.data.product){
+       return alert("Tovar savatga tashlandi")
+      }
+      
     } catch (err:any) {
       alert(err.message);
       return null

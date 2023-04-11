@@ -1,7 +1,9 @@
 <script>
+    import { getProductsById } from "../api/product.api";
     import { productsStore } from "../storage/storeages";
 import Footer from "./footer.svelte";
 import Header from "./header.svelte";
+
 
 </script>
 
@@ -20,7 +22,7 @@ import Header from "./header.svelte";
                 <h2>{product.name}</h2>
                 <p>{product.desc}</p>
                 <span>{product.price} so'm</span>
-                <button>Savatga tashlash</button>
+                <button on:click={() => getProductsById(product.id)}>Savatga tashlash</button>
                 
         </div>
         {/each}

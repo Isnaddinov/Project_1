@@ -13,6 +13,7 @@ export type Products = {
     name: string
     desc: string
     price: number
+    count: number
     discount: number
     type_id: number
 }

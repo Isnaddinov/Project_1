@@ -1,73 +1,32 @@
 <script lang="ts">
-    import { basketStorage } from "../storage/storeages";
+    import { basketStorage, getBasketProductsStorage } from "../storage/storeages";
 import Footer from "./footer.svelte";
     import Header from "./header.svelte";
     
-    type Product = {
-        id: number;
-        name: string;
-        desc: string;
-        price: number;
-        count: number;
-        type_id: number;
-    };
-
-    
-    let products: Product[] = [
-        {
-            id: 1,
-            name: "name",
-            desc: "description",
-            price: 12000,
-            count: 0,
-            type_id: 1,
-        },
-        {
-            id: 1,
-            name: "name",
-            desc: "description",
-            price: 12000,
-            count: 0,
-            type_id: 1,
-        },
-        {
-            id: 1,
-            name: "name",
-            desc: "description",
-            price: 12000,
-            count: 0,
-            type_id: 1,
-        },
-        {
-            id: 1,
-            name: "name",
-            desc: "description",
-            price: 12000,
-            count: 0,
-            type_id: 1,
-        },
-    ];
-    
     let umumiy: number = 0;
-   
+    let minus:boolean 
+    let counts:number
+    
 </script>
 
 <Header />
 <div class="titles">
     <h3 class="pro-title">Tovarlar</h3>
-    {#each $basketStorage as storage }
-    <h2 class="bas_name">Assalomu Alaykum {storage.name} </h2>
-    {/each}
+   {#each $basketStorage as basket}
+   <h2 class="bas_name">Assalomu Alaykum {basket.name} !</h2>
+   {/each}
+    
         
     
 <h3 class="or-title">Rasmiylashtirish</h3>
 </div>
 <div class="basket-box">
     <div class="bas_products">
-        
-      
 
-            {#each products as product}
+        {#if $getBasketProductsStorage.length === 0}
+        <h2 class="alert_bas">Tovarlarni tanlang !</h2>
+        {/if}
+            {#each $getBasketProductsStorage as product}
                         <div class="bas_product">
                            
                                 <img class="image" src="./img/Product1.jpg" alt="" />
@@ -76,11 +35,12 @@ import Footer from "./footer.svelte";
                             <p>{product.desc}</p>
                             <span>{product.price} so'm</span>
                             <button on:click={() => { product.count--;
-                                    if (product.count <= 0) { product.count = 0; umumiy = umumiy}
-                                    umumiy = umumiy + product.count * product.price - ((product.count + 1) * product.price)}}>-</button>
-                            <input type="text" value={product.count} name="number"/>
-                            <button on:click={() => {product.count++;
-                                    umumiy = umumiy + product.count * product.price - ((product.count - 1) * product.price)}}>+</button>
+                                    if (product.count <= 0) { product.count = 0; umumiy = umumiy ; minus = false}
+                                    umumiy = umumiy + product.count * product.price - ((product.count + 1) * product.price)}}><img class="pluser" src="../img/minus.png" alt="minus" style={"" + (minus ? "display:flex" : "display:none")}/><h4 class={"" + (minus ? "none" : "offplus")}> </h4></button>
+                            <input type="text" value={product.count} name="number"/> 
+                            <button on:click={() => {product.count++; 
+                                    if(product.count > 0){minus = true}
+                                    umumiy = umumiy + product.count * product.price - ((product.count - 1) * product.price)}}><img class="pluser" src="../img/plus.png" alt="plus"/></button>
                            <h1> {product.count * product.price}</h1>
                         </div>
                         {/each}

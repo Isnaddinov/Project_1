@@ -10,7 +10,6 @@
     import BasketPage from './svelte/basketPage.svelte';
     import SearchPage from './svelte/searchPage.svelte';
     import ProductPage from './svelte/productPage.svelte';
-    import Types from './svelte/typesPage.svelte';
     import TypesPage from './svelte/typesPage.svelte';
 </script>
 
