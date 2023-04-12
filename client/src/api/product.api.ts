@@ -1,7 +1,16 @@
  import axios from "axios";
  import { productsStore, searchProductStore, discountProductStore, getBasketProductsStorage } from "../storage/storeages";
+import type { Products } from "../types/types";
  
  const url = `http://localhost:9090/stroyapi`;
+
+  let proArray:Products[] =[]
+
+ export function basketing (){
+    getBasketProductsStorage.set(proArray)
+ }
+
+ 
 
   export async function getProductsByTypeId(id:number){
     try {
@@ -36,11 +45,11 @@
   export async function getProductsById(id:number){
     try {
       const products = await axios.get(url + `/products/getbyid/${id}`)
-      getBasketProductsStorage.set(products.data.product)
-
+       proArray.push(products.data.product)
+    
       if(products.data.product){
-       return alert("Tovar savatga tashlandi")
-      }
+        return alert("Tovar savatga tashlandi")
+       }
       
     } catch (err:any) {
       alert(err.message);

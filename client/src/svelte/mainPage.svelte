@@ -5,7 +5,7 @@
     import {getCategories} from '../api/category.api'
     import {getTypesId} from '../api/type.api'
     import { getBasket } from "../api/basket.api";
-    import {getProductsBySearch, getProductsByTypeId, getProductsByDiscount} from '../api/product.api'
+    import {getProductsBySearch, getProductsByTypeId, getProductsByDiscount, basketing} from '../api/product.api'
 
     getCategories()
     getProductsByDiscount()
@@ -22,6 +22,7 @@ async function searcher(){
 async function basket() {
         const token = localStorage.getItem('userToken')
         await getBasket(token)
+        basketing()
     }
 
 

@@ -4,7 +4,7 @@
     import {categoriesStore, typesStore} from '../storage/storeages'
     import {getCategories} from '../api/category.api'
     import {getTypesId} from '../api/type.api'
-    import {getProductsByTypeId, getProductsBySearch} from '../api/product.api'
+    import {getProductsByTypeId, getProductsBySearch, basketing} from '../api/product.api'
     import { getBasket } from "../api/basket.api";
 
 let product:string = ''
@@ -17,6 +17,7 @@ let product:string = ''
     async function basket() {
         const token = localStorage.getItem('userToken')
         await getBasket(token)
+        basketing()
     }
 
 let type:boolean = false

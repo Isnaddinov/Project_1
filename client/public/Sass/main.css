@@ -163,6 +163,7 @@
   align-items: center;
   height: 50px;
   width: 210px;
+  font-size: 22px;
   color: #FFFFFF;
   align-self: center;
   font-weight: bold;
@@ -475,9 +476,11 @@ footer .kontakt_ul {
   align-items: center;
   height: 50px;
   width: 210px;
+  font-size: 22px;
   color: #FFFFFF;
   align-self: center;
   font-weight: bold;
+  margin-top: 10px;
 }
 .nav_bottom_h .controllers .basket img {
   margin-right: 20px;

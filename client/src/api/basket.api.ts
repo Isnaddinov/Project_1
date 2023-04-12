@@ -26,7 +26,7 @@ export async function getBasket(token:string){
      return  basketStorage.set(basket.data.loginBasket)
      
     } catch (err:any) {
-        alert(err.message);
+        alert("Foydalanuvchi avtorizatsiya qilmagan");
         return null
     }
 }
