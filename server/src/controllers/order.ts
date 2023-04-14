@@ -18,7 +18,7 @@ export async function postOrder(req: Request, res: Response) {
     try {
         const body:Order = req.body
         
-        const {name, surname, phone, viloyat, tuman, shahar, aniq_adress, umummiybahosi, productsId, status, basketId} = body
+        const {name, surname, phone, viloyat, tuman, shahar, aniq_adress, umummiybahosi,  status, basketId} = body
         const order:Order = {
             name, 
             surname, 
@@ -28,7 +28,6 @@ export async function postOrder(req: Request, res: Response) {
             shahar, 
             aniq_adress, 
             umummiybahosi, 
-            productsId,
             status,
             basketId
         }

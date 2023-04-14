@@ -22,7 +22,6 @@ export type Order = {
     shahar: string
     aniq_adress:  string
     umummiybahosi: number
-    productsId: number[]
     status: any
     basketId: number
 }
@@ -46,11 +45,15 @@ export type Products = {
     discount: number
     type_id: number
 }
-export type Count = {
-    id: number,
-    productId: number
-    counts: number
-    basketId: number
+export type Item = {
+    id: number
+    name: string
+    img:string
+    desc: string
+    count: number
+    price: number
+    discount: number
+    orderId: number
 }
 export type Banner = {
     id: number

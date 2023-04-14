@@ -1,12 +1,12 @@
 <script lang="ts">
+    import { saveItems } from "../api/product.api";
     import { basketStorage, getBasketProductsStorage } from "../storage/storeages";
 import Footer from "./footer.svelte";
     import Header from "./header.svelte";
-    
     let umumiy: number = 0;
-    let minus:boolean 
-    let counts:number
+    let minus:boolean
     
+
 </script>
 
 <Header />
@@ -14,7 +14,7 @@ import Footer from "./footer.svelte";
     <h3 class="pro-title">Tovarlar</h3>
    {#each $basketStorage as basket}
    <h2 class="bas_name">Assalomu Alaykum {basket.name} !</h2>
-   {/each}
+      {/each}
     
         
     
@@ -70,7 +70,7 @@ import Footer from "./footer.svelte";
                             <input type="text" placeholder="Shahriniz">
                             <input class="aniq_man" type="text" placeholder="Aniq manzilingiz">
                         <div class="order_btns">
-                            <button class="order_btn_saq">Saqlash</button>
+                            <button  class="order_btn_saq">Saqlash</button>
                             <button class="order_btn_sot">Sotib olish</button>
                          </div>    
                         </div>

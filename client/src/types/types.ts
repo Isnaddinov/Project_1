@@ -11,6 +11,7 @@ export type Types = {
 export type Products = {
     id: number
     name: string
+    img:string
     desc: string
     price: number
     count: number
@@ -28,4 +29,14 @@ export type Basket = {
     id: number
     name: string
     userId: number
+}
+
+export type Item = {
+    name: string
+    img:string
+    price: number
+    desc: string
+    count: number
+    discount: number
+    orderId: number
 }
