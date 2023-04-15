@@ -40,3 +40,16 @@ export type Item = {
     discount: number
     orderId: number
 }
+export type Order = {
+    id:number
+    name: string
+    surname: string
+    phone: string
+    viloyat: string
+    tuman: string
+    shahar: string
+    aniq_adress:  string
+    umummiybahosi: number
+    status: any
+    basketId: number
+}

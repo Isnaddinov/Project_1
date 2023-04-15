@@ -2,11 +2,13 @@ import { Item } from '../types/types';
 import { Request, Response } from "express";
 import { findItemById, removeItem, writeItem } from '../services/item.service';
 
+
 export async function postItem(req:Request, res:Response){
   try {
-   const body:Item = req.body
-   const{ name, img, price, desc, count,  discount, orderId } = body
-   const item = await writeItem(name, img, price, desc, count,  discount, orderId)
+   const body:Item[] = req.body
+   console.log(body);
+   
+   const item = await writeItem(body)
    return res.status(200).json({message: "Item posted", item})
   } catch (error) {
    return res.status(400).json({message: "Error with post Count"})

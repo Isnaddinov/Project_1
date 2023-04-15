@@ -46,7 +46,6 @@ export type Products = {
     type_id: number
 }
 export type Item = {
-    id: number
     name: string
     img:string
     desc: string

@@ -1,6 +1,6 @@
  import axios from "axios";
- import { productsStore, searchProductStore, discountProductStore, getBasketProductsStorage } from "../storage/storeages";
-import type { Item, Products } from "../types/types";
+ import { productsStore, searchProductStore, discountProductStore, getBasketProductsStorage, orderStorage } from "../storage/storeages";
+import type { Item, Order, Products } from "../types/types";
  
  const url = `http://localhost:9090/stroyapi`;
 
@@ -74,14 +74,25 @@ import type { Item, Products } from "../types/types";
     }
   }
 
-  export async function saveItems(orderId:number) {
+  export async function saveItems() {
 try {
+  
+  let orders:Order[] = []
+  let orderId:number = orders[0].id
   let itemsArr:Products[] = []
+
+  orderStorage.subscribe((order) => {
+    orders = order
+ })
+
   getBasketProductsStorage.subscribe((products) => {
-    itemsArr =  products 
+    itemsArr = products 
   })
+  
+  
+
   itemsArr.forEach(function(product){
-      postItem(product.name, product.img, product.price, product.desc, product.count, product.discount, orderId)
+    delete Object(product).id, delete Object(product).typesId, Object(product).orderId = orderId
   })
 } catch (error) {
   console.error("Error with saveItems " + error);

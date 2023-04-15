@@ -1,12 +1,19 @@
 <script lang="ts">
+    import { postOrder } from "../api/order.api";
     import { saveItems } from "../api/product.api";
     import { basketStorage, getBasketProductsStorage } from "../storage/storeages";
 import Footer from "./footer.svelte";
     import Header from "./header.svelte";
-    let umumiy: number = 0;
+   
     let minus:boolean
-    
-
+    let name: string
+    let surname: string
+    let phone:string 
+    let viloyat:string
+    let tuman: string
+    let shahar: string
+    let aniq_adress: string 
+    let umumiy: number = 0;
 </script>
 
 <Header />
@@ -14,10 +21,7 @@ import Footer from "./footer.svelte";
     <h3 class="pro-title">Tovarlar</h3>
    {#each $basketStorage as basket}
    <h2 class="bas_name">Assalomu Alaykum {basket.name} !</h2>
-      {/each}
-    
-        
-    
+      {/each}  
 <h3 class="or-title">Rasmiylashtirish</h3>
 </div>
 <div class="basket-box">
@@ -48,10 +52,10 @@ import Footer from "./footer.svelte";
                     <div class="order-box">
                         <h2> Umumiy narx : {umumiy} so'm</h2>
                         <div class="order">
-                            <input type="text" placeholder="Ismingiz">
-                            <input type="text" placeholder="Familyangiz">
-                            <input type="text" placeholder="Telefongiz">
-                            <select placeholder="Viloyatingiz" >
+                            <input bind:value={name} type="text" placeholder="Ismingiz">
+                            <input bind:value={surname} type="text" placeholder="Familyangiz">
+                            <input bind:value={phone} type="text" placeholder="Telefongiz">
+                            <select bind:value={viloyat} placeholder="Viloyatingiz" >
                                 <option value="">Viloyatni tanlang</option>
                                 <option value="Xorazm">Xorazm</option>
                                 <option value="Toshkent shahri">Toshkent shahri</option>
@@ -66,11 +70,11 @@ import Footer from "./footer.svelte";
                                 <option value="Samarqand">Samarqand</option>
                                 <option value="Buxoro">Buxoro</option>
                             </select>
-                            <input type="text" placeholder="Tumaningiz">
-                            <input type="text" placeholder="Shahriniz">
-                            <input class="aniq_man" type="text" placeholder="Aniq manzilingiz">
+                            <input bind:value={tuman} type="text" placeholder="Tumaningiz">
+                            <input bind:value={shahar} type="text" placeholder="Shahriniz">
+                            <input bind:value={aniq_adress} class="aniq_man" type="text" placeholder="Aniq manzilingiz">
                         <div class="order_btns">
-                            <button  class="order_btn_saq">Saqlash</button>
+                            <button on:click={() => {postOrder(name, surname, phone, viloyat, tuman, shahar, aniq_adress, umumiy), saveItems()}} class="order_btn_saq">Saqlash</button>
                             <button class="order_btn_sot">Sotib olish</button>
                          </div>    
                         </div>

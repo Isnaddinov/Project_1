@@ -1,9 +1,10 @@
-import { log } from "console";
-import { client } from "../routers/prismaclient.routes";
 
-export async function writeItem(name: string, img: string, price: number, desc: string, count:number, discount: number, orderId:number){
+import { client } from "../routers/prismaclient.routes";
+import { Item } from "../types/types";
+
+export async function writeItem(data:Item[]){
    try {
-     return await client.item.createMany({data:{name:name, img:img, price: price,  desc:desc, count:count, discount:discount, orderId:orderId}})
+     return await client.item.createMany({data})
    } catch (error) {
         console.error("Error with service writeCount " + error);
    }

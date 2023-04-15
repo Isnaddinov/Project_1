@@ -7,6 +7,5 @@ export const orderCheck = () => [
     check('tuman', "Tumaningizni tanlang").notEmpty(),
     check('shahar', "Shahringizni tanlang").notEmpty(),
     check('aniq_adress', "Aniq manzilingizni kiriting").notEmpty(),
-    check('products', "Productlarni tanlang").notEmpty(),
     check('basketId', "BasketIdni kiriting").notEmpty()
 ]
